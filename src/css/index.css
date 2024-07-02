@@ -141,13 +141,13 @@ html, body {
 
 .tab.active {
     background-color: #7890E7;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .news-list {
-    border: 1px solid #dee2e6;
+    border: 1px solid #D2DAE0;
     padding: 20px;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
 .news-item {
