@@ -11,10 +11,6 @@ html, body {
     padding: 20px;
 }
 
-.main-container {
-
-}
-
 .left-btn, .right-btn {
     /* 버튼 기본 속성 제거 */
     border: none;
@@ -53,10 +49,9 @@ html, body {
     gap: 8px;
 }
 
-/* 기존 margin 값 초기화 */
+/* p태그 margin 기본값 초기화 */
 .header-logo p {
     margin: 0;
-    padding: 0;
     font-weight: bolder;
     font-size: 24px;
 }
