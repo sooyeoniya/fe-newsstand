@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Pretendard-Variable';
+    src: url('../font/PretendardVariable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Variable', 'Noto Sans KR', sans-serif;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -52,12 +63,14 @@ html, body {
 /* p태그 margin 기본값 초기화 */
 .header-logo p {
     margin: 0;
-    font-weight: bolder;
+    padding: 0;
+    font-weight: 700;
     font-size: 24px;
 }
 
 .header-date {
     font-size: 16px;
+    font-weight: 400;
     color: #5F6E76;
 }
 
@@ -79,11 +92,12 @@ html, body {
 }
 
 .top-news-item > .title {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .top-news-item > .description {
     color: #5F6E76;
+    font-weight: 400;
 }
 
 .top-menu {
@@ -97,11 +111,12 @@ html, body {
     display: flex;
     gap: 25px;
     color: #879298;
+    font-weight: 400;
 }
 
 .media-total:hover, .media-my:hover {
     cursor: pointer;
-    font-weight: bolder;
+    font-weight: 700;
     color: #000000;
 }
 
@@ -125,6 +140,7 @@ html, body {
 .tab {
     padding: 10px 15px;
     font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
     /* 버튼 기본 속성 제거 */
     border: none;
@@ -137,6 +153,7 @@ html, body {
 .tab.active {
     background-color: #7890E7;
     color: #FFFFFF;
+    font-weight: 600;
 }
 
 .news-list {
@@ -158,12 +175,14 @@ html, body {
 
 .news-date {
     font-size: 12px;
+    font-weight: 400;
     color: #5F6E76;
 }
 
 .subscribe-button {
     padding: 5px 10px;
     font-size: 12px;
+    font-weight: 400;
     color: #879298;
     background-color: #F5F7F9;
     border-radius: 50px;
@@ -190,6 +209,7 @@ html, body {
 
 .news-description {
     font-size: 16px;
+    font-weight: 400;
     color: #14212B;
 }
 
@@ -202,12 +222,14 @@ html, body {
 .headline {
     margin-bottom: 16px;
     font-size: 16px;
+    font-weight: 400;
     color: #4B5966;
     cursor: pointer;
 }
 
 .news-disclaimer {
     font-size: 14px;
+    font-weight: 400;
     color: #879298;
     margin-top: 10px;
 }
