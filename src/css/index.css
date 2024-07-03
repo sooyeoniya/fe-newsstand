@@ -108,7 +108,7 @@ html, body {
     width: 100%;
 }
 
-.top-news-item > .title {
+.top-news-item > .company {
     font-weight: var(--font-weight-bold);
     color: var(--color-text-first);
 }
