@@ -1,7 +1,23 @@
+:root {
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 16px;
+    --font-size-xlarge: 24px;
+
+    --color-text-first: #14212B;
+    --color-text-second: #5F6E76;
+    --color-text-muted: #879298;
+    --color-border: #D2DAE0;
+    --color-background: #F5F7F9;
+}
+
 @font-face {
     font-family: 'Pretendard-Variable';
     src: url('../font/PretendardVariable.woff2') format('woff2');
-    font-weight: 100 900;
+    font-weight: var(--font-weight-regular) var(--font-weight-bold);
     font-style: normal;
 }
 
@@ -64,14 +80,15 @@ html, body {
 .header-logo p {
     margin: 0;
     padding: 0;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xlarge);
+    color: var(--color-text-first);
 }
 
 .header-date {
-    font-size: 16px;
-    font-weight: 400;
-    color: #5F6E76;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-second);
 }
 
 .top-news {
@@ -82,22 +99,23 @@ html, body {
 
 .top-news-item {
     display: flex;
-    font-size: 14px;
+    font-size: var(--font-size-medium);
     cursor: pointer;
     gap: 12px;
-    border: 1px solid #D2DAE0;
-    background-color: #F5F7F9;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
     padding: 10px;
     width: 100%;
 }
 
 .top-news-item > .title {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-first);
 }
 
 .top-news-item > .description {
-    color: #5F6E76;
-    font-weight: 400;
+    color: var(--color-text-second);
+    font-weight: var(--font-weight-regular);
 }
 
 .top-menu {
@@ -110,14 +128,14 @@ html, body {
 .top-menu-media {
     display: flex;
     gap: 25px;
-    color: #879298;
-    font-weight: 400;
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-regular);
 }
 
 .media-total:hover, .media-my:hover {
     cursor: pointer;
-    font-weight: 700;
-    color: #000000;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-first);
 }
 
 .top-menu-view {
@@ -131,16 +149,16 @@ html, body {
 
 .news-tabs {
     display: flex;
-    background-color: #F5F7F9;
-    border: 1px solid #D2DAE0;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
     border-bottom: none;
-    color: #879298;
+    color: var(--color-text-muted);
 }
 
 .tab {
     padding: 10px 15px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
     cursor: pointer;
     /* 버튼 기본 속성 제거 */
     border: none;
@@ -157,7 +175,7 @@ html, body {
 }
 
 .news-list {
-    border: 1px solid #D2DAE0;
+    border: 1px solid var(--color-border);
     padding: 20px;
     background-color: #FFFFFF;
 }
@@ -174,20 +192,20 @@ html, body {
 }
 
 .news-date {
-    font-size: 12px;
-    font-weight: 400;
-    color: #5F6E76;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-second);
 }
 
 .subscribe-button {
     padding: 5px 10px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #879298;
-    background-color: #F5F7F9;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+    background-color: var(--color-background);
     border-radius: 50px;
     cursor: pointer;
-    border: 1px solid #D2DAE0;
+    border: 1px solid var(--color-border);
 }
 
 .news-content {
@@ -208,9 +226,9 @@ html, body {
 }
 
 .news-description {
-    font-size: 16px;
-    font-weight: 400;
-    color: #14212B;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-first);
 }
 
 .news-headlines {
@@ -221,15 +239,15 @@ html, body {
 
 .headline {
     margin-bottom: 16px;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
     color: #4B5966;
     cursor: pointer;
 }
 
 .news-disclaimer {
-    font-size: 14px;
-    font-weight: 400;
-    color: #879298;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
     margin-top: 10px;
 }
