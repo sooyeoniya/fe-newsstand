@@ -1,0 +1,27 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-logo {
+    display: flex;
+    gap: 8px;
+}
+
+/* p태그 margin 기본값 초기화 */
+.header-logo p {
+    margin: 0;
+    padding: 0;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xlarge);
+    color: var(--color-text-first);
+}
+
+.header-date {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-second);
+}

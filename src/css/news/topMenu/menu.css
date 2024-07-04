@@ -1,0 +1,25 @@
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.top-menu-media {
+    display: flex;
+    gap: 25px;
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-regular);
+}
+
+.media-total:hover, .media-my:hover {
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-first);
+}
+
+.top-menu-view {
+    display: flex;
+    gap: 10px;
+}

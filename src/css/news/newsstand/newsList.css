@@ -1,0 +1,78 @@
+
+.news-list {
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.news-date {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-second);
+}
+
+.subscribe-button {
+    padding: 5px 10px;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+    background-color: var(--color-background);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid var(--color-border);
+}
+
+.news-content {
+    display: flex;
+    gap: 20px;
+}
+
+.news-thumbnail {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-image {
+    width: 320px;
+    height: 200px;
+    object-fit: cover; /* 화면 채움 */
+}
+
+.news-description {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-first);
+}
+
+.news-headlines {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headline {
+    margin-bottom: 16px;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: #4B5966;
+    cursor: pointer;
+}
+
+.news-disclaimer {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+    margin-top: 10px;
+}

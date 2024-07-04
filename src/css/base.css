@@ -1,0 +1,41 @@
+
+:root {
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 16px;
+    --font-size-xlarge: 24px;
+
+    --color-text-first: #14212B;
+    --color-text-second: #5F6E76;
+    --color-text-muted: #879298;
+    --color-border: #D2DAE0;
+    --color-background: #F5F7F9;
+}
+
+@font-face {
+    font-family: 'Pretendard-Variable';
+    src: url('../font/PretendardVariable.woff2') format('woff2');
+    font-weight: var(--font-weight-regular) var(--font-weight-bold);
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Variable', 'Noto Sans KR', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+}
