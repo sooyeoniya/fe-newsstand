@@ -9,20 +9,23 @@ function updateTopNews(idx, topNewsItemId) {
 
   allNews.forEach(news => {
     const li = document.createElement('li');
-    const content = document.createElement('div');
-    content.classList.add('content');
 
-    const newsName = document.createElement('div');
+    const newsName = document.createElement('span');
     newsName.classList.add('company');
     newsName.textContent = news.name;
 
-    const newsDescription = document.createElement('div');
+    const newsDescription = document.createElement('span');
+    const newsLink = document.createElement('a');
     newsDescription.classList.add('description');
-    newsDescription.textContent = news.description;
+    newsLink.textContent = news.description;
+    newsLink.href = news.url;
+    newsLink.target = "_blank";
+    newsLink.rel = "noopener noreferrer";
+    newsDescription.appendChild(newsLink);
 
-    content.appendChild(newsName);
-    content.appendChild(newsDescription);
-    li.appendChild(content);
+    li.appendChild(newsName);
+    li.appendChild(newsDescription);
+
     rollingList.appendChild(li);
   });
 
@@ -33,6 +36,7 @@ function startRolling() {
   const rollingList1 = updateTopNews(0, 'top-news-item-1');
   const rollingList2 = updateTopNews(1, 'top-news-item-2');
 
+  // FIXME: 롤링 오류 수정 (시작할 때, length 까지 전부 롤링 후 다시 첫 번째 기사로 넘어갈 때)
   function roll(list) {
     const itemHeight = list.children[0].offsetHeight;
     let currentIndex = 0;
