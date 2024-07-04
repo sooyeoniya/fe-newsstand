@@ -40,14 +40,30 @@ function startRolling() {
     const itemHeight = list.children[0].offsetHeight;
     const totalItems = list.children.length;
     let currentIdx = 0;
+    let rollingInterval;
 
     function moveToNext() {
       list.style.transition = 'top 0.5s ease';
       list.style.top = `-${currentIdx * itemHeight}px`;
       currentIdx = (currentIdx + 1) % totalItems;
-      setTimeout(moveToNext, 2000);
     }
+
+    function startInterval() {
+      rollingInterval = setInterval(() => {
+        moveToNext();
+      }, 5000);
+    }
+
+    list.addEventListener('mouseenter', () => {
+      clearInterval(rollingInterval);
+    });
+
+    list.addEventListener('mouseleave', () => {
+      startInterval();
+    });
+
     moveToNext();
+    startInterval();
   }
 
   roll(rollingList1);
