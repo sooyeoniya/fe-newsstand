@@ -114,6 +114,7 @@ html, body {
     position: absolute;
     width: 100%;
     transition: top 0.5s ease;
+    top: 0;
     box-sizing: border-box;
     /* ul 기본 스타일 제거 */
     list-style: none;

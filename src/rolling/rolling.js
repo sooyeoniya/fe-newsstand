@@ -36,31 +36,24 @@ function startRolling() {
   const rollingList1 = updateTopNews(0, 'top-news-item-1');
   const rollingList2 = updateTopNews(1, 'top-news-item-2');
 
-  // FIXME: 롤링 오류 수정 (시작할 때, length 까지 전부 롤링 후 다시 첫 번째 기사로 넘어갈 때)
   function roll(list) {
     const itemHeight = list.children[0].offsetHeight;
-    let currentIndex = 0;
+    const totalItems = list.children.length;
+    let currentIdx = 0;
 
     function moveToNext() {
-      currentIndex = (currentIndex + 1) % list.children.length;
       list.style.transition = 'top 0.5s ease';
-      list.style.top = `-${currentIndex * itemHeight}px`;
+      list.style.top = `-${currentIdx * itemHeight}px`;
+      currentIdx = (currentIdx + 1) % totalItems;
 
-      setTimeout(() => {
-        if (currentIndex === list.children.length - 1) {
-          list.style.transition = 'none';
-          list.style.top = '0px';
-          currentIndex = 0;
-        }
-        setTimeout(moveToNext, 5000);
-      }, 500);
+      if (currentIdx === totalItems) currentIdx = 0;
+      setTimeout(moveToNext, 5000);
     }
-
-    setTimeout(moveToNext, 5000);
+    moveToNext();
   }
 
   roll(rollingList1);
-  roll(rollingList2);
+  setTimeout(() => {roll(rollingList2)}, 1000);
 }
 
 startRolling();
