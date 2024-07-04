@@ -113,7 +113,6 @@ html, body {
 .rolling {
     position: absolute;
     width: 100%;
-    transition: top 0.5s ease;
     top: 0;
     box-sizing: border-box;
     /* ul 기본 스타일 제거 */
@@ -139,9 +138,9 @@ html, body {
 .rolling > .description, a {
     color: var(--color-text-second);
     font-weight: var(--font-weight-regular);
+    text-decoration: none;
     display: block;
     display: -webkit-box;
-    text-decoration: none;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;

@@ -3,7 +3,6 @@ export const TOP_NEWS_DATA = {
     {
       "topNews": [
         {
-          "id": 1,
           "newsLists": [
             {
               "name": "연합뉴스",
@@ -34,7 +33,6 @@ export const TOP_NEWS_DATA = {
           length: 5
         },
         {
-          "id": 2,
           "newsLists": [
             {
               "name": "서울경제",

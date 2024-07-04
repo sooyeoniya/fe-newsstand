@@ -45,9 +45,7 @@ function startRolling() {
       list.style.transition = 'top 0.5s ease';
       list.style.top = `-${currentIdx * itemHeight}px`;
       currentIdx = (currentIdx + 1) % totalItems;
-
-      if (currentIdx === totalItems) currentIdx = 0;
-      setTimeout(moveToNext, 5000);
+      setTimeout(moveToNext, 2000);
     }
     moveToNext();
   }
