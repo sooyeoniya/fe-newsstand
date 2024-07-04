@@ -4,7 +4,7 @@ export const SUB_NEWS_DATA = {
       "mySubscribeNews": [
         {
           "name": "서울경제",
-          "data": [ // TODO: 각 기사별로 데이터 정리
+          "data": [ // TODO: 각 기사 별로 데이터 정리
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.02.10. 18:27 편집",
