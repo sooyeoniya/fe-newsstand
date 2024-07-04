@@ -1,2 +1,2 @@
 import "./utils/date/getDateString.js";
-import "./rolling/rolling.js";
+import "./news/topNews/rolling.js";

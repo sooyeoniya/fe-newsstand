@@ -1,4 +1,4 @@
-import { TOP_NEWS_DATA } from "../data/topNewsData.js";
+import { TOP_NEWS_DATA } from "../../data/topNewsData.js";
 
 function updateTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);
