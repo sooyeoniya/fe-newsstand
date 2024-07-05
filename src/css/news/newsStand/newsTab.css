@@ -12,9 +12,8 @@
 }
 
 .tab {
+    position: relative;
     padding: 10px 15px;
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
     cursor: pointer;
     /* 버튼 기본 속성 제거 */
     border: none;
@@ -22,10 +21,54 @@
     color: inherit;
     outline: none;
     box-shadow: none;
+    overflow: hidden;
 }
 
-.tab.active {
+.tab .page-title {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+}
+
+.tab:hover {
     background-color: #7890E7;
     color: #FFFFFF;
     font-weight: 600;
+}
+
+.tab.active {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    color: #FFFFFF;
+    background-color: #7890E7;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #7890E7;
+}
+
+.tab.active .progress-bar {
+    width: 100%;
+    background-color: #4362D0;
+}
+
+.tab.active .page-title,
+.tab.active .page-info {
+    z-index: 1;
+}
+
+.tab.active .page-title {
+    font-weight: 600;
+}
+
+.tab.active .page-info {
+    font-size: var(--font-size-small);
+    font-weight: 400;
 }

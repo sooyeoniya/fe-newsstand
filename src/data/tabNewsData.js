@@ -4,7 +4,8 @@ export const TAB_NEWS_DATA = {
       "newsTabs": [
         {
           "tabName": "종합/경제",
-          "tabData": [ // TODO: companyNewsData, mySubscribeNewsData에서 채워질 부분
+          "category": "comprehensive",
+          "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.02.10. 18:27 편집",
@@ -37,10 +38,12 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 2
         },
         {
           "tabName": "방송/통신",
+          "category": "broadcast",
           "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
@@ -58,10 +61,12 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 4
         },
         {
           "tabName": "IT",
+          "category": "it",
           "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
@@ -79,10 +84,12 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 6
         },
         {
           "tabName": "영자지",
+          "category": "entertainment",
           "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
@@ -100,10 +107,12 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 8
         },
         {
           "tabName": "스포츠/연예",
+          "category": "sports",
           "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
@@ -121,10 +130,12 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 7
         },
         {
           "tabName": "매거진/전문지",
+          "category": "magazine",
           "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
@@ -142,10 +153,12 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 4
         },
         {
           "tabName": "지역",
+          "category": "region",
           "tabData": [
             {
               "sourceLogo": "assets/news/logo/seoulEco.svg",
@@ -163,7 +176,8 @@ export const TAB_NEWS_DATA = {
               ],
               "disclaimerText": "서울경제 언론사에서 직접 편집한 뉴스입니다."
             }
-          ]
+          ],
+          length: 2
         }
       ]
     }
