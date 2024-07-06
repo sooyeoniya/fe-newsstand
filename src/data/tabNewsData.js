@@ -13,7 +13,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -32,7 +32,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -58,7 +58,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -77,7 +77,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -103,7 +103,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -122,7 +122,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -148,7 +148,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -167,7 +167,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -193,7 +193,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -212,7 +212,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -238,7 +238,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -257,7 +257,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -283,7 +283,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
@@ -302,7 +302,7 @@ export const TAB_NEWS_DATA = {
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
-                "newsDescription": "또 국민연금의 몽니…현대百 지주사 불발",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
                 "url": "http://example.com/main-news"
               },
               "subNews": [
