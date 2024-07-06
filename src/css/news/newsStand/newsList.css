@@ -77,6 +77,11 @@
     cursor: pointer;
 }
 
+.news-description:hover, .headline:hover {
+    text-decoration: underline;
+    text-decoration-color: #4B5966;
+}
+
 .news-disclaimer {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);

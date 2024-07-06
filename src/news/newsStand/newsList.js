@@ -26,12 +26,16 @@ function renderNewsContent() {
         <div class="news-content">
           <div class="news-thumbnail">
             <img src="${newsItem.mainNews.thumbnailImage}" alt="뉴스 이미지" class="news-image">
-            <div class="news-description">${newsItem.mainNews.newsTitle}</div>
+            <div class="news-description">
+              <a href="${newsItem.mainNews.url}" target="_blank" rel="noopener noreferrer">${newsItem.mainNews.newsTitle}</a>
+            </div>
           </div>
           <div>
             <ul class="news-headlines">
               ${newsItem.subNews.map(subNews => `
-                <li class="headline">${subNews.newsTitle}</li>
+                <li class="headline">
+                  <a href="${subNews.url}" target="_blank" rel="noopener noreferrer">${subNews.newsTitle}</a>
+                </li>
               `).join('')}
             </ul>
             <div class="news-disclaimer">
