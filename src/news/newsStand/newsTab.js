@@ -1,6 +1,6 @@
 import { initNewsContentRenderer } from "./newsList.js";
 
-function createTabButton(tabData, index, tabState) {
+function renderTabButton(tabData, index, tabState) {
   const tabButton = document.createElement('button');
   tabButton.className = `tab ${index === 0 ? 'active' : ''}`;
   tabButton.setAttribute('data-tab', tabData.category);
@@ -17,7 +17,7 @@ function createTabButton(tabData, index, tabState) {
 
 function initTabs(tabsContainer, newsTabs, tabState) {
   newsTabs.forEach((tabData, index) => {
-    const tabButton = createTabButton(tabData, index, tabState);
+    const tabButton = renderTabButton(tabData, index, tabState);
     tabsContainer.appendChild(tabButton);
   });
 }
