@@ -1,4 +1,4 @@
-import {TAB_NEWS_DATA} from "../../data/tabNewsData.js";
+import { TAB_NEWS_DATA } from "../../data/tabNewsData.js";
 
 function renderNewsContent() {
   const newsContainer = document.querySelector('.news-container');
@@ -11,7 +11,11 @@ function renderNewsContent() {
   const activeTabData = newsTabs.find(tab => tab.category === activeCategory);
   if (!activeTabData) return;
 
-  newsContainer.innerHTML = activeTabData.tabData.map(newsItem => `
+  const pageInfo = activeTab.querySelector('.page-info');
+  const currentPage = parseInt(pageInfo.textContent.split('/')[0], 10) - 1;
+  const newsItem = activeTabData.tabData[currentPage];
+
+  newsContainer.innerHTML = `
     <div class="news-list">
       <article class="news-item">
         <div class="news-meta">
@@ -37,20 +41,11 @@ function renderNewsContent() {
         </div>
       </article>
     </div>
-  `).join('');
+  `;
 }
 
 function initNewsContentRenderer() {
   renderNewsContent();
-
-  const tabsContainer = document.querySelector('.news-tabs');
-  tabsContainer.addEventListener('click', (event) => {
-    if (event.target.closest('.tab')) {
-      setTimeout(renderNewsContent, 0);
-    }
-  });
-
-  setInterval(renderNewsContent, 2000);
 }
 
 export { initNewsContentRenderer };

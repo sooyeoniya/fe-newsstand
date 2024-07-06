@@ -7,7 +7,7 @@ export const TAB_NEWS_DATA = {
           "category": "comprehensive",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "1",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.02.10. 12:34",
               "subscribe": "Y",
@@ -26,7 +26,26 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "2",
+              "sourceLogo": "assets/news/logo/seoulEco.svg",
+              "newsDate": "2023.02.10. 11:11",
+              "subscribe": "Y",
+              "mainNews": {
+                "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
+                "url": "http://example.com/main-news"
+              },
+              "subNews": [
+                {"newsTitle": "위스키 사려고 이틀 전부터 줄 섰어요", "url": "http://example.com/news1"},
+                {"newsTitle": "'방시혁 제국'이나 '카카오 왕국'이나...K엔터 누가 거머쥘까", "url": "http://example.com/news2"},
+                {"newsTitle": "사용후핵연료 저장시설 포함...이대론 7년 뒤 원전 멈춘다", "url": "http://example.com/news3"},
+                {"newsTitle": "[단독] 원희룡 \"해외건설 근로자 소득공제 월 500만원으로 상향할 것\"", "url": "http://example.com/news4"},
+                {"newsTitle": "태평양에는 우영우의 고래만 있는 게 아니었다 [로비의 그림]", "url": "http://example.com/news5"},
+                {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
+              ]
+            },
+            {
+              "mediaName": "2.5",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.02.10. 11:11",
               "subscribe": "Y",
@@ -45,14 +64,14 @@ export const TAB_NEWS_DATA = {
               ]
             }
           ],
-          length: 2
+          length: 3
         },
         {
           "tabName": "방송/통신",
           "category": "broadcast",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "3",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.02.10. 20:27",
               "subscribe": "Y",
@@ -71,7 +90,7 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "4",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.02.10. 18:27",
               "subscribe": "Y",
@@ -88,16 +107,35 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "태평양에는 우영우의 고래만 있는 게 아니었다 [로비의 그림]", "url": "http://example.com/news5"},
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
+            },
+            {
+              "mediaName": "4.5",
+              "sourceLogo": "assets/news/logo/seoulEco.svg",
+              "newsDate": "2023.02.10. 11:11",
+              "subscribe": "Y",
+              "mainNews": {
+                "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
+                "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
+                "url": "http://example.com/main-news"
+              },
+              "subNews": [
+                {"newsTitle": "위스키 사려고 이틀 전부터 줄 섰어요", "url": "http://example.com/news1"},
+                {"newsTitle": "'방시혁 제국'이나 '카카오 왕국'이나...K엔터 누가 거머쥘까", "url": "http://example.com/news2"},
+                {"newsTitle": "사용후핵연료 저장시설 포함...이대론 7년 뒤 원전 멈춘다", "url": "http://example.com/news3"},
+                {"newsTitle": "[단독] 원희룡 \"해외건설 근로자 소득공제 월 500만원으로 상향할 것\"", "url": "http://example.com/news4"},
+                {"newsTitle": "태평양에는 우영우의 고래만 있는 게 아니었다 [로비의 그림]", "url": "http://example.com/news5"},
+                {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
+              ]
             }
           ],
-          length: 2
+          length: 3
         },
         {
           "tabName": "IT",
           "category": "it",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "5",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.12.10. 11:27",
               "subscribe": "Y",
@@ -116,7 +154,7 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "6",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.03.13. 18:27",
               "subscribe": "Y",
@@ -142,7 +180,7 @@ export const TAB_NEWS_DATA = {
           "category": "entertainment",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "7",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.04.15. 18:27",
               "subscribe": "Y",
@@ -161,7 +199,7 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "8",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2024.04.10. 18:27",
               "subscribe": "Y",
@@ -187,7 +225,7 @@ export const TAB_NEWS_DATA = {
           "category": "sports",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "9",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2023.09.10. 18:27",
               "subscribe": "Y",
@@ -206,7 +244,7 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "10",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2024.10.30. 18:27",
               "subscribe": "Y",
@@ -232,7 +270,7 @@ export const TAB_NEWS_DATA = {
           "category": "magazine",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "11",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2022.02.22. 18:27",
               "subscribe": "Y",
@@ -251,7 +289,7 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "12",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2021.01.11. 11:07",
               "subscribe": "Y",
@@ -277,7 +315,7 @@ export const TAB_NEWS_DATA = {
           "category": "region",
           "tabData": [
             {
-              "mediaName": "서울경제",
+              "mediaName": "13",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2026.06.16. 18:27",
               "subscribe": "N",
@@ -296,7 +334,7 @@ export const TAB_NEWS_DATA = {
               ]
             },
             {
-              "mediaName": "중앙일보",
+              "mediaName": "14",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
               "newsDate": "2020.02.20. 18:27",
               "subscribe": "Y",

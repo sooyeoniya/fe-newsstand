@@ -13,11 +13,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    gap: 20px;
+    gap: 10px;
 }
 
 .news-source {
     height: 20px;
+    width: 80px;
 }
 
 .news-date {
