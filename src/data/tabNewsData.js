@@ -9,7 +9,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
+              "newsDate": "2023.02.10. 12:34",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -28,7 +28,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "중앙일보",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "2023.02.10. 18:27",
+              "newsDate": "2023.02.10. 11:11",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -54,7 +54,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
+              "newsDate": "2023.02.10. 20:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -99,7 +99,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
+              "newsDate": "2023.12.10. 11:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -118,7 +118,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "중앙일보",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "2023.02.10. 18:27",
+              "newsDate": "2023.03.13. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -144,7 +144,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
+              "newsDate": "2023.04.15. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -163,7 +163,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "중앙일보",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "2023.02.10. 18:27",
+              "newsDate": "2024.04.10. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -189,7 +189,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
+              "newsDate": "2023.09.10. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -208,7 +208,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "중앙일보",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "2023.02.10. 18:27",
+              "newsDate": "2024.10.30. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -234,7 +234,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
+              "newsDate": "2022.02.22. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -253,7 +253,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "중앙일보",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "2023.02.10. 18:27",
+              "newsDate": "2021.01.11. 11:07",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
@@ -279,8 +279,8 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "서울경제",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "123456789",
-              "subscribe": "Y",
+              "newsDate": "2026.06.16. 18:27",
+              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",
                 "newsTitle": "또 국민연금의 몽니…현대百 지주사 불발",
@@ -298,7 +298,7 @@ export const TAB_NEWS_DATA = {
             {
               "mediaName": "중앙일보",
               "sourceLogo": "assets/news/logo/seoulEco.svg",
-              "newsDate": "2023.02.10. 18:27",
+              "newsDate": "2020.02.20. 18:27",
               "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "assets/news/thumbnail/thumbnail.svg",

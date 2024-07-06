@@ -16,10 +16,15 @@
     gap: 20px;
 }
 
+.news-source {
+    height: 20px;
+}
+
 .news-date {
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-regular);
     color: var(--color-text-second);
+    width: 130px;
 }
 
 .subscribe-button {

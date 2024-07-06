@@ -1,4 +1,5 @@
 import { TAB_NEWS_DATA } from "../../data/tabNewsData.js";
+import { initNewsContentRenderer } from "./newsList.js";
 
 function updateTabCategory() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -48,7 +49,7 @@ function updateTabCategory() {
       const progressBar = tab.querySelector('.progress-bar');
       if (progressBar) {
         progressBar.style.width = '0%';
-        const totalDuration = 20000;
+        const totalDuration = 2000;
         const startTime = performance.now();
 
         function animate() {
@@ -77,6 +78,7 @@ function updateTabCategory() {
                   tab.classList.add('active');
                   updateTabContent(tab, newsTabs[index]);
                   animationProgressBar(tab);
+                  initNewsContentRenderer();
                 } else {
                   tab.classList.remove('active');
                   removeTabContent(tab);
@@ -110,6 +112,7 @@ function updateTabCategory() {
 
     const initialActiveTab = tabsContainer.querySelector('.tab.active');
     if (initialActiveTab) animationProgressBar(initialActiveTab);
+    initNewsContentRenderer();
   });
 }
 

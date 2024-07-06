@@ -30,9 +30,7 @@
 }
 
 .tab:hover {
-    background-color: #7890E7;
-    color: #FFFFFF;
-    font-weight: 600;
+    text-decoration: underline;
 }
 
 .tab.active {
@@ -43,6 +41,7 @@
     width: 150px;
     color: #FFFFFF;
     background-color: #7890E7;
+    text-decoration: none;
 }
 
 .progress-bar {
