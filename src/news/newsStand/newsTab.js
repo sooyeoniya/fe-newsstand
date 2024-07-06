@@ -8,7 +8,7 @@ function createTabButton(tabData, index, tabState) {
   tabButton.innerHTML = `
     <span class="page-title">${tabData.tabName}</span>
     ${index === 0 ? `
-      <span class="page-info">${tabState.count}/${tabData.length}</span>
+      <span class="page-info">${tabState.pageCount}/${tabData.tabData.length}</span>
       <span class="progress-bar"></span>
     ` : ''}
   `;
@@ -31,7 +31,7 @@ function addTabClickListener(tabsContainer, newsTabs, tabState) {
     tabs.forEach((tab, index) => {
       if (tab === clickedTab) {
         tabState.activeTabIndex = index;
-        tabState.count = 1;
+        tabState.pageCount = 1;
         updateActiveTab(tabsContainer, newsTabs, tabState);
       }
     });
@@ -57,10 +57,10 @@ function updateTabContent(tab, newsTabs, tabState) {
   const tabData = newsTabs[tabState.activeTabIndex];
   const pageInfo = tab.querySelector('.page-info');
   if (pageInfo) {
-    pageInfo.textContent = `${tabState.count}/${tabData.length}`;
+    pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
   } else {
     tab.insertAdjacentHTML('beforeend', `
-      <span class="page-info">${tabState.count}/${tabData.length}</span>
+      <span class="page-info">${tabState.pageCount}/${tabData.tabData.length}</span>
       <span class="progress-bar"></span>
     `);
   }
@@ -96,15 +96,15 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
         const activeTabIndex = tabState.activeTabIndex;
         const nextTabIndex = (activeTabIndex + 1) % tabs.length;
 
-        tabState.count++;
+        tabState.pageCount++;
 
         const pageInfo = tab.querySelector('.page-info');
         const tabData = newsTabs[activeTabIndex];
-        if (pageInfo && tabData) pageInfo.textContent = `${tabState.count}/${tabData.length}`;
+        if (pageInfo && tabData) pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
 
-        if (tabState.count > tabData.length) {
+        if (tabState.pageCount > tabData.tabData.length) {
           tabState.activeTabIndex = nextTabIndex;
-          tabState.count = 1;
+          tabState.pageCount = 1;
 
           tabs.forEach((tab, index) => {
             if (index === nextTabIndex) {
@@ -137,7 +137,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
 
 function initTabManager(tabsContainer, newsTabs) {
   const tabState = {
-    count: 1,
+    pageCount: 1,
     activeTabIndex: 0
   };
 

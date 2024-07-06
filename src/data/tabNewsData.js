@@ -63,8 +63,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 3
+          ]
         },
         {
           "tabName": "방송/통신",
@@ -127,8 +126,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 3
+          ]
         },
         {
           "tabName": "IT",
@@ -172,8 +170,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 2
+          ]
         },
         {
           "tabName": "영자지",
@@ -217,8 +214,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 2
+          ]
         },
         {
           "tabName": "스포츠/연예",
@@ -262,8 +258,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 2
+          ]
         },
         {
           "tabName": "매거진/전문지",
@@ -307,8 +302,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 2
+          ]
         },
         {
           "tabName": "지역",
@@ -352,8 +346,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "LG엔솔, 폴란드 자동차사업협회 가입...\"유럽서 목소리 키운다\"", "url": "http://example.com/news6"}
               ]
             }
-          ],
-          length: 2
+          ]
         }
       ]
     }

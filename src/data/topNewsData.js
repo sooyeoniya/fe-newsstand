@@ -28,9 +28,8 @@ export const TOP_NEWS_DATA = {
               "name": "저런일보",
               "description": "ㅇㅇ 들어간 서울아산병원 교수 \"환자·전공의들에게 미안해서1111111111111111111s\"",
               "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
-            },
-          ],
-          length: 5
+            }
+          ]
         },
         {
           "newsLists": [
@@ -59,8 +58,7 @@ export const TOP_NEWS_DATA = {
               "description": "이준석 “尹 별난 분…국힘 당대표 김건희 여사가 되지않는한 당 가만히 놔두지 않을것”",
               "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
             },
-          ],
-          length: 5
+          ]
         }
       ],
     }
