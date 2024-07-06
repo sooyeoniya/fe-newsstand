@@ -22,26 +22,44 @@
     outline: none;
     box-shadow: none;
     overflow: hidden;
-}
 
-.tab .page-title {
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-}
+    &:hover {
+        text-decoration: underline;
+    }
 
-.tab:hover {
-    text-decoration: underline;
-}
+    .page-title {
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-regular);
+    }
 
-.tab.active {
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 150px;
-    color: #FFFFFF;
-    background-color: #7890E7;
-    text-decoration: none;
+    &.active {
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        color: #FFFFFF;
+        background-color: #7890E7;
+        text-decoration: none;
+
+        .progress-bar {
+            width: 100%;
+            background-color: #4362D0;
+        }
+
+        .page-title, .page-info {
+            z-index: 1;
+        }
+
+        .page-title {
+            font-weight: 600;
+        }
+
+        .page-info {
+            font-size: var(--font-size-small);
+            font-weight: 400;
+        }
+    }
 }
 
 .progress-bar {
@@ -51,23 +69,4 @@
     height: 100%;
     width: 0;
     background-color: #7890E7;
-}
-
-.tab.active .progress-bar {
-    width: 100%;
-    background-color: #4362D0;
-}
-
-.tab.active .page-title,
-.tab.active .page-info {
-    z-index: 1;
-}
-
-.tab.active .page-title {
-    font-weight: 600;
-}
-
-.tab.active .page-info {
-    font-size: var(--font-size-small);
-    font-weight: 400;
 }

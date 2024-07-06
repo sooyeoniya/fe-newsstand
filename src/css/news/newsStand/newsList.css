@@ -61,6 +61,11 @@
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-regular);
     color: var(--color-text-first);
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #4B5966;
+    }
 }
 
 .news-headlines {
@@ -70,16 +75,16 @@
 }
 
 .headline {
-    margin-bottom: 16px;
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-regular);
+    margin-bottom: 16px;
     color: #4B5966;
     cursor: pointer;
-}
 
-.news-description:hover, .headline:hover {
-    text-decoration: underline;
-    text-decoration-color: #4B5966;
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #4B5966;
+    }
 }
 
 .news-disclaimer {
