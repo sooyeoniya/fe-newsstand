@@ -5,29 +5,14 @@ function updateTopNews(idx, topNewsItemId) {
   const rollingList = topNewsItem.querySelector('.rolling');
   const allNews = TOP_NEWS_DATA.data[0].topNews[idx].newsLists;
 
-  rollingList.innerHTML = '';
-
-  allNews.forEach(news => {
-    const li = document.createElement('li');
-
-    const newsName = document.createElement('span');
-    newsName.classList.add('company');
-    newsName.textContent = news.name;
-
-    const newsDescription = document.createElement('span');
-    const newsLink = document.createElement('a');
-    newsDescription.classList.add('description');
-    newsLink.textContent = news.description;
-    newsLink.href = news.url;
-    newsLink.target = "_blank";
-    newsLink.rel = "noopener noreferrer";
-    newsDescription.appendChild(newsLink);
-
-    li.appendChild(newsName);
-    li.appendChild(newsDescription);
-
-    rollingList.appendChild(li);
-  });
+  rollingList.innerHTML = allNews.map(news => `
+   <li>
+     <span class="company">${news.name}</span>
+     <span class="description">
+       <a href="${news.url}" target="_blank" rel="noopener noreferrer">${news.description}</a>
+     </span>
+   </li>
+ `).join('');
 
   return rollingList;
 }
