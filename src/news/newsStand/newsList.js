@@ -23,14 +23,14 @@ function renderNewsContent() {
           <span class="news-date">${newsItem.newsDate} 편집</span>
           <button class="subscribe-button">${newsItem.subscribe === 'Y' ? 'x' : '+ 구독하기'}</button>
         </div>
-        <div class="news-content">
+        <div class="news-main-content">
           <div class="news-thumbnail">
             <img src="${newsItem.mainNews.thumbnailImage}" alt="뉴스 이미지" class="news-image">
             <div class="news-description">
               <a href="${newsItem.mainNews.url}" target="_blank" rel="noopener noreferrer">${newsItem.mainNews.newsTitle}</a>
             </div>
           </div>
-          <div>
+          <div class="news-sub-content">
             <ul class="news-headlines">
               ${newsItem.subNews.map(subNews => `
                 <li class="headline">
