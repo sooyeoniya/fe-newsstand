@@ -4,8 +4,7 @@ import { initTabManager } from "./newsTab.js";
 
 function initNewsTabs() {
   const tabsContainer = document.querySelector('.news-tabs');
-  const { data } = TAB_NEWS_DATA;
-  const newsTabs = data[0].newsTabs;
+  const newsTabs = TAB_NEWS_DATA.data[0].newsTabs;
 
   initTabManager(tabsContainer, newsTabs);
   initNewsContentRenderer();
