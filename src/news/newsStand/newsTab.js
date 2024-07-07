@@ -91,6 +91,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
 
       if (progress < 1) {
         animationId = requestAnimationFrame(animate);
+        tab.dataset.animationId = animationId.toString();
       } else {
         const tabs = tabsContainer.querySelectorAll('.tab');
         const activeTabIndex = tabState.activeTabIndex;
@@ -119,20 +120,68 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
         } else {
           animateProgressBar(tab, tabsContainer, newsTabs, tabState);
         }
-
         initNewsContentRenderer();
       }
     }
 
     animationId = requestAnimationFrame(animate);
+    tab.dataset.animationId = animationId.toString();
 
-    tabsContainer.addEventListener('click', () => {
-      if (animationId) {
+    tabsContainer.addEventListener('click', (event) => {
+      if (animationId || (animationId && !event.target.closest('.tab'))) {
         cancelAnimationFrame(animationId);
-        animationId = null;
+        delete tab.dataset.animationId;
       }
     });
   }
+}
+
+function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
+  const leftButton = document.querySelector('.left-btn');
+  const rightButton = document.querySelector('.right-btn');
+
+  leftButton.addEventListener('click', () => {
+    const tabs = tabsContainer.querySelectorAll('.tab');
+    const activeTabIndex = tabState.activeTabIndex;
+    const activeTab = tabs[activeTabIndex];
+
+    const animationId = parseInt(activeTab.dataset.animationId);
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      delete activeTab.dataset.animationId;
+    }
+
+    tabState.pageCount--;
+    if (tabState.pageCount < 1) {
+      const prevTabIndex = (activeTabIndex - 1 + tabs.length) % tabs.length;
+      tabState.activeTabIndex = prevTabIndex;
+      tabState.pageCount = newsTabs[prevTabIndex].tabData.length;
+    }
+
+    updateActiveTab(tabsContainer, newsTabs, tabState);
+  });
+
+  rightButton.addEventListener('click', () => {
+    const tabs = tabsContainer.querySelectorAll('.tab');
+    const activeTabIndex = tabState.activeTabIndex;
+    const tabData = newsTabs[activeTabIndex];
+    const activeTab = tabs[activeTabIndex];
+
+    const animationId = parseInt(activeTab.dataset.animationId);
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      delete activeTab.dataset.animationId;
+    }
+
+    tabState.pageCount++;
+    if (tabState.pageCount > tabData.tabData.length) {
+      const nextTabIndex = (activeTabIndex + 1) % tabs.length;
+      tabState.activeTabIndex = nextTabIndex;
+      tabState.pageCount = 1;
+    }
+
+    updateActiveTab(tabsContainer, newsTabs, tabState);
+  });
 }
 
 function initTabManager(tabsContainer, newsTabs) {
@@ -144,6 +193,7 @@ function initTabManager(tabsContainer, newsTabs) {
   initTabs(tabsContainer, newsTabs, tabState);
   addTabClickListener(tabsContainer, newsTabs, tabState);
   animateProgressBar(tabsContainer.querySelector('.tab.active'), tabsContainer, newsTabs, tabState);
+  addArrowButtonClickListener(tabsContainer, newsTabs, tabState);
 }
 
 export { initTabManager };

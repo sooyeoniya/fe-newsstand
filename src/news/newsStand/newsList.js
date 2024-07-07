@@ -6,8 +6,7 @@ function renderNewsContent() {
   if (!activeTab) return;
 
   const activeCategory = activeTab.getAttribute('data-tab');
-  const { data } = TAB_NEWS_DATA;
-  const newsTabs = data[0].newsTabs;
+  const newsTabs = TAB_NEWS_DATA.data[0].newsTabs;
   const activeTabData = newsTabs.find(tab => tab.category === activeCategory);
   if (!activeTabData) return;
 
