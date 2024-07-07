@@ -1,6 +1,6 @@
 import { TOP_NEWS_DATA } from "../../data/topNewsData.js";
 
-function updateTopNews(idx, topNewsItemId) {
+function renderTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);
   const rollingList = topNewsItem.querySelector('.rolling');
   const allNews = TOP_NEWS_DATA.data[0].topNews[idx].newsLists;
@@ -18,8 +18,8 @@ function updateTopNews(idx, topNewsItemId) {
 }
 
 function startRolling() {
-  const rollingList1 = updateTopNews(0, 'top-news-item-1');
-  const rollingList2 = updateTopNews(1, 'top-news-item-2');
+  const rollingList1 = renderTopNews(0, 'top-news-item-1');
+  const rollingList2 = renderTopNews(1, 'top-news-item-2');
 
   function roll(list) {
     const itemHeight = list.children[0].offsetHeight;
