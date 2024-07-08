@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/layout/header.css">
     <link rel="stylesheet" href="css/news/topNews/rolling.css">
     <link rel="stylesheet" href="css/news/topMenu/menu.css">
+    <link rel="stylesheet" href="css/news/topMenu/media.css">
     <link rel="stylesheet" href="css/news/newsStand/newsList.css">
     <link rel="stylesheet" href="css/news/newsStand/newsTab.css">
 </head>
@@ -38,8 +39,8 @@
 
         <nav class="top-menu">
             <div class="top-menu-media">
-                <div class="media-total">전체 언론사</div>
-                <div class="media-my">내가 구독한 언론사</div>
+                <button class="media-total active">전체 언론사</button>
+                <button class="media-my">내가 구독한 언론사</button>
             </div>
             <div class="top-menu-view">
                 <img src="assets/views/listBlue.svg" alt="list">
@@ -47,10 +48,20 @@
             </div>
         </nav>
 
-        <main class="news-stand">
-            <nav class="news-tabs"></nav>
-            <div class="news-container"></div>
-        </main>
+        <div class="media-view">
+            <div class="media-total-view active">
+                <main class="news-stand">
+                    <nav class="news-tabs"></nav>
+                    <div class="news-container"></div>
+                </main>
+            </div>
+            <div class="media-my-view">
+                <main class="news-stand">
+                    <nav class="news-tabs"></nav>
+                    <div class="news-container"></div>
+                </main>
+            </div>
+        </div>
     </div>
     <button class="right-btn">
         <img src="assets/buttons/rightButton.svg" alt="좌측 화살표" class="right-arrow">
