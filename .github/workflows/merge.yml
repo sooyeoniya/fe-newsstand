@@ -60,7 +60,8 @@ jobs:
 
             const {repository:{pullRequests:{edges: list}}} = await github.graphql(query, variables)
             for( let {node} of list) {
-             if(node.baseRefName === "main" || !node.labels.nodes.length) {
+             //if(node.baseRefName === "main" || !node.labels.nodes.length) {
+             if(node.baseRefName === "main") {
                 //add comment
                 await github.rest.issues.createComment({
                     owner: context.repo.owner,
