@@ -37,6 +37,10 @@
     border-radius: 50px;
     cursor: pointer;
     border: 1px solid var(--color-border);
+
+    &:hover {
+        border: 2px solid var(--color-border);
+    }
 }
 
 .news-main-content {
@@ -54,6 +58,12 @@
     width: 320px;
     height: 200px;
     object-fit: cover; /* 화면 채움 */
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 }
 
 .news-description {

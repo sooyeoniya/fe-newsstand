@@ -91,7 +91,7 @@ function renderNewsContent() {
     <div class="news-list">
       <article class="news-item">
         <div class="news-meta">
-          <img src="${newsItem.sourceLogo}" alt="${newsItem.mediaName} logo" class="news-source">
+          <img src="${newsItem.sourceLogo}" alt="${newsItem.mediaName} logo" class="news-source" />
           <span class="news-date">${newsItem.newsDate} 편집</span>
           <button class="subscribe-button" data-media-name="${newsItem.mediaName}">
             ${subscriptionStatus[newsItem.mediaName] === 'Y' ? 'x' : '+ 구독하기'}
@@ -99,7 +99,7 @@ function renderNewsContent() {
         </div>
         <div class="news-main-content">
           <div class="news-thumbnail">
-            <img src="${newsItem.mainNews.thumbnailImage}" alt="뉴스 이미지" class="news-image">
+            <img src="${newsItem.mainNews.thumbnailImage}" alt="뉴스 이미지" class="news-image" />
             <div class="news-description">
               <a href="${newsItem.mainNews.url}" target="_blank" rel="noopener noreferrer">${newsItem.mainNews.newsTitle}</a>
             </div>
