@@ -1,0 +1,74 @@
+.toast {
+    position: absolute;
+    width: 286px;
+    height: 54px;
+    top: 370px;
+    align-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: var(--color-main-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.confirmation {
+    position: absolute;
+    width: 320px;
+    height: 140px;
+    top: 370px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-large);
+    text-align: center;
+}
+
+.confirm-text {
+    height: 92px;
+    align-content: center;
+}
+
+.confirm-media {
+    font-weight: var(--font-weight-bold);
+}
+
+.confirm-description {
+    color: var(--color-text-second);
+}
+
+.confirm-select {
+    display: flex;
+    height: 48px;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-background);
+
+    > div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    > div:not(:last-child) {
+        border-right: 1px solid var(--color-border);
+    }
+}
+
+.confirm-yes, .confirm-no {
+    font-size: var(--font-size-large);
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-decoration);
+        color: var(--color-decoration);
+    }
+}

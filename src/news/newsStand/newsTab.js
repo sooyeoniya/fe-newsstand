@@ -77,7 +77,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
   const progressBar = tab.querySelector('.progress-bar');
   if (progressBar) {
     progressBar.style.width = '0%';
-    const totalDuration = 2000;
+    const totalDuration = 20000;
     const startTime = performance.now();
 
     let animationId = null;

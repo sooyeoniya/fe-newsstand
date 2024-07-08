@@ -10,7 +10,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "경향신문",
               "sourceLogo": "assets/news/logo/kyunghyang.svg",
               "newsDate": "2023.02.10. 12:34",
-              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "https://img.khan.co.kr/news/2024/07/06/rcv.YNA.20240705.PYH2024070501770001300_P1.webp",
                 "newsTitle": "민주당, 검찰총장에 “허세 부리지 말고 김 여사 수사나 제대로”",
@@ -29,7 +28,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "YTN",
               "sourceLogo": "assets/news/logo/ytn.svg",
               "newsDate": "2023.02.10. 11:11",
-              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "https://image.ytn.co.kr/general/jpg/2022/0413/202204131632445371_t.jpg",
                 "newsTitle": "'김 여사 문자' 후폭풍 확산...\"전대 개입\" vs \"해당 행위\"",
@@ -48,7 +46,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "SBSBiz",
               "sourceLogo": "assets/news/logo/sbsBiz.svg",
               "newsDate": "2023.02.10. 11:11",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://img.sbs.co.kr/newimg/news/20240706/201954883_1280.jpg",
                 "newsTitle": "서울역 인근서 고령 운전자 차량 돌진…행인 2명 치어",
@@ -73,7 +70,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "매일경제",
               "sourceLogo": "assets/news/logo/maeil.svg",
               "newsDate": "2023.02.10. 20:27",
-              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "https://wimg.mk.co.kr/news/cms/202407/06/news-p.v1.20240706.fd08c99031b04720a87b4cc7897f4fc2_P1.jpg",
                 "newsTitle": "“해변이 온 통 피바다”…섬에 놀러왔다 상어에 물린 美엄마 ‘끔찍’",
@@ -92,7 +88,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "연합뉴스TV",
               "sourceLogo": "assets/news/logo/yonhap.svg",
               "newsDate": "2023.02.10. 18:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://img0.yna.co.kr/photo/yna/YH/2024/01/04/PYH2024010414600001300_P4.jpg",
                 "newsTitle": "유소년 경기서 욕설·폭언…손웅정측 \"답답해 거친 표현\"",
@@ -111,7 +106,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "세계일보",
               "sourceLogo": "assets/news/logo/segye.svg",
               "newsDate": "2023.02.10. 11:11",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://img.segye.com/content/image/2024/07/05/20240705508906.jpg",
                 "newsTitle": "일상화된 ‘저강도 도발’… 북한의 노림수는",
@@ -136,7 +130,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "조선일보",
               "sourceLogo": "assets/news/logo/chosun.svg",
               "newsDate": "2023.12.10. 11:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://imgnews.pstatic.net/image/023/2024/07/06/0003844628_001_20240706160012847.jpg?type=w647",
                 "newsTitle": "서울역 인근서 80대 운전자 인도 돌진…시민 2명 차로 치어",
@@ -155,7 +148,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "동아일보",
               "sourceLogo": "assets/news/logo/donga.svg",
               "newsDate": "2023.03.13. 18:27",
-              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "https://imgnews.pstatic.net/image/020/2024/07/06/0003574812_001_20240706150510496.jpg",
                 "newsTitle": "‘시청역 역주행 사고’ 가해차량, 최근 6년간 6번 사고 이력",
@@ -180,7 +172,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "서울신문",
               "sourceLogo": "assets/news/logo/seoul.svg",
               "newsDate": "2023.04.15. 18:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://imgnews.pstatic.net/image/081/2024/07/06/0003462874_001_20240706213311195.jpg",
                 "newsTitle": "“도대체 당신 누구야”…유명 식당 여주인은 그놈에게 끝내 ‘청부살해’ 당했다[전국부 사건창고]",
@@ -199,7 +190,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "한겨레",
               "sourceLogo": "assets/news/logo/hankyoreh.svg",
               "newsDate": "2024.04.10. 18:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://imgnews.pstatic.net/image/028/2024/07/05/0002696883_001_20240706181017816.jpg",
                 "newsTitle": "‘김건희’ 전면 등장 이상한 전당대회…한동훈과 진실 공방 번지나",
@@ -224,7 +214,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "문화일보",
               "sourceLogo": "assets/news/logo/munhwa.svg",
               "newsDate": "2023.09.10. 18:27",
-              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "https://imgnews.pstatic.net/image/021/2024/07/06/0002647014_001_20240706141911138.jpg",
                 "newsTitle": "“푸틴, 김정은에 우크라 파병 요구… 김정은 확답 안 해”",
@@ -243,7 +232,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "국민일보",
               "sourceLogo": "assets/news/logo/kookmin.svg",
               "newsDate": "2024.10.30. 18:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://imgnews.pstatic.net/image/005/2024/07/06/2024070605322412876_1720211544_0020279245_20240706064407477.jpg",
                 "newsTitle": "이전 ‘급발진 주장’ 블랙박스 보니…“가속페달만 6번”",
@@ -268,7 +256,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "데일리안",
               "sourceLogo": "assets/news/logo/dailyan.svg",
               "newsDate": "2022.02.22. 18:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://cdnimage.dailian.co.kr/news/202407/news_1720067848_1379800_m_1.jpeg",
                 "newsTitle": "화성시, 1조원 규모ASML-삼성전자 연구지원시설 투자유치 성공",
@@ -287,7 +274,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "아이뉴스",
               "sourceLogo": "assets/news/logo/inews.svg",
               "newsDate": "2021.01.11. 11:07",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://image.inews24.com/v1/d78daaadfcbb27.jpg",
                 "newsTitle": "'히잡 단속 완화' 개혁파 페제시키안 이란 대통령 당선",
@@ -312,7 +298,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "MBN",
               "sourceLogo": "assets/news/logo/mbn.svg",
               "newsDate": "2026.06.16. 18:27",
-              "subscribe": "N",
               "mainNews": {
                 "thumbnailImage": "https://img.mbn.co.kr/filewww/news/2024/07/06/17202538806688fdb82f103.jpg",
                 "newsTitle": "'한국은 없네'…가장 이민가고 싶은 나라 1위는?",
@@ -331,7 +316,6 @@ export const TAB_NEWS_DATA = {
               "mediaName": "아시아경제",
               "sourceLogo": "assets/news/logo/asia.svg",
               "newsDate": "2020.02.20. 18:27",
-              "subscribe": "Y",
               "mainNews": {
                 "thumbnailImage": "https://cphoto.asiae.co.kr/listimglink/1/2024070617161542351_1720253775.jpg",
                 "newsTitle": "\"최저임금 수준에 청년공무원 떠나\"…공무원노조 '임금인상' 집회",

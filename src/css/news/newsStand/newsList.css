@@ -1,6 +1,5 @@
 
 .news-list {
-    border: 1px solid var(--color-border);
     padding: 20px;
     background-color: #FFFFFF;
 }
@@ -30,7 +29,7 @@
 }
 
 .subscribe-button {
-    padding: 5px 10px;
+    padding: 5px 9px;
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-regular);
     color: var(--color-text-muted);
@@ -38,6 +37,10 @@
     border-radius: 50px;
     cursor: pointer;
     border: 1px solid var(--color-border);
+
+    &:hover {
+        border: 2px solid var(--color-border);
+    }
 }
 
 .news-main-content {
@@ -55,6 +58,12 @@
     width: 320px;
     height: 200px;
     object-fit: cover; /* 화면 채움 */
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 }
 
 .news-description {
@@ -64,7 +73,7 @@
     width: 320px;
     &:hover {
         text-decoration: underline;
-        text-decoration-color: #4B5966;
+        text-decoration-color: var(--color-decoration);
     }
 }
 
@@ -82,12 +91,12 @@
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-regular);
     margin-bottom: 16px;
-    color: #4B5966;
+    color: var(--color-decoration);
     cursor: pointer;
 
     &:hover {
         text-decoration: underline;
-        text-decoration-color: #4B5966;
+        text-decoration-color: var(--color-decoration);
     }
 }
 
