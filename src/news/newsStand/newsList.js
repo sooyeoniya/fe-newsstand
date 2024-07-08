@@ -1,5 +1,21 @@
 import { TAB_NEWS_DATA } from "../../data/tabNewsData.js";
 
+function handleSubscribeButtonClick(event) {
+  const subscribeButton = event.target;
+  const mediaName = subscribeButton.dataset.mediaName;
+  const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus'));
+
+  if (subscriptionStatus[mediaName] === 'N') {
+    subscriptionStatus[mediaName] = 'Y';
+    subscribeButton.textContent = 'x';
+  } else {
+    subscriptionStatus[mediaName] = 'N';
+    subscribeButton.textContent = '+ 구독하기';
+  }
+
+  localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
+}
+
 function renderNewsContent() {
   const newsContainer = document.querySelector('.news-container');
   const activeTab = document.querySelector('.news-tabs .tab.active');
@@ -14,13 +30,17 @@ function renderNewsContent() {
   const currentPage = parseInt(pageInfo.textContent.split('/')[0], 10) - 1;
   const newsItem = activeTabData.tabData[currentPage];
 
+  const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus'));
+
   newsContainer.innerHTML = `
     <div class="news-list">
       <article class="news-item">
         <div class="news-meta">
           <img src="${newsItem.sourceLogo}" alt="${newsItem.mediaName} logo" class="news-source">
           <span class="news-date">${newsItem.newsDate} 편집</span>
-          <button class="subscribe-button">${newsItem.subscribe === 'Y' ? 'x' : '+ 구독하기'}</button>
+          <button class="subscribe-button" data-media-name="${newsItem.mediaName}">
+            ${subscriptionStatus[newsItem.mediaName] === 'Y' ? 'x' : '+ 구독하기'}
+          </button>
         </div>
         <div class="news-main-content">
           <div class="news-thumbnail">
@@ -45,6 +65,9 @@ function renderNewsContent() {
       </article>
     </div>
   `;
+
+  const subscribeButton = newsContainer.querySelector('.subscribe-button');
+  subscribeButton.addEventListener('click', handleSubscribeButtonClick);
 }
 
 function initNewsContentRenderer() {

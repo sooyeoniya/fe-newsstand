@@ -29,7 +29,7 @@
 }
 
 .subscribe-button {
-    padding: 5px 10px;
+    padding: 5px 9px;
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-regular);
     color: var(--color-text-muted);
