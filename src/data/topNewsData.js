@@ -5,62 +5,60 @@ export const TOP_NEWS_DATA = {
         {
           "newsLists": [
             {
-              "name": "연합뉴스",
-              "description": "채상병특검법 상정·필리버스터 돌입…대정부질문 또 파행11111111111",
-              "url": "https://www.yna.co.kr/view/AKR20240703119200001?section=politics/all&site=topnews01"
+              "name": "아시아경제",
+              "description": "\"내가 누군지 알아?\"…지각해 비행기 못타자 난동피운 정치인",
+              "url": "https://www.asiae.co.kr/article/2024070508173074446"
+            },
+            {
+              "name": "MBN",
+              "description": "이란 대통령에 개혁파 페제시키안 당선…55% 득표",
+              "url": "https://www.mbn.co.kr/news/world/5039703"
             },
             {
               "name": "조선일보",
-              "description": "경찰 \"가해 운전자, 호텔 주차장 출입구 쪽부터 과속\"(종합)",
-              "url": "https://www.yna.co.kr/view/AKR20240703084951004?section=society/all&site=major_news01"
+              "description": "서울역 인근서 80대 운전자 인도 돌진…시민 2명 차로 치어",
+              "url": "https://n.news.naver.com/article/023/0003844628"
             },
             {
-              "name": "매일경제",
-              "description": "경찰 들어간 서울아산병원 교수 \"환자·전공의들에게 미안 해서11 11\"",
-              "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
+              "name": "동아일보",
+              "description": "“사이판 수영장서 1초만에 전신마비”…무사 귀국한 유튜버의 뒷 이야기",
+              "url": "https://n.news.naver.com/article/020/0003574811"
             },
             {
-              "name": "이런경제",
-              "description": "채상병 서울아산병원 교수 \"환자·전공의들에게 미안해서11 1111111\"",
-              "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
+              "name": "서울신문",
+              "description": "대낮 길거리서 60대母 둔기로 폭행한 30대 아들 체포",
+              "url": "https://n.news.naver.com/article/081/0003462895"
             },
-            {
-              "name": "저런일보",
-              "description": "ㅇㅇ 들어간 서울아산병원 교수 \"환자·전공의들에게 미안해서1111111111111111111s\"",
-              "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
-            },
-          ],
-          length: 5
+          ]
         },
         {
           "newsLists": [
             {
-              "name": "서울경제",
-              "description": "송재혁 삼성전자 사장 “생성형 AI 등 기술 발전, 차원 다른 반도체 혁신 요구”",
-              "url": "https://www.yna.co.kr/view/AKR20240703119200001?section=politics/all&site=topnews01"
+              "name": "한겨레",
+              "description": "‘김건희’ 전면 등장 이상한 전당대회…한동훈과 진실 공방 번지나",
+              "url": "https://n.news.naver.com/article/028/0002696883"
             },
             {
-              "name": "어떤경제",
-              "description": "尹대통령, 이재명 겨냥해 \"왜 25만원만 주나 100억씩 주지\"",
-              "url": "https://www.yna.co.kr/view/AKR20240703084951004?section=society/all&site=major_news01"
+              "name": "문화일보",
+              "description": "주유소 기름값 2주 연속 상승…전국 평균 ‘1682.2원’",
+              "url": "https://n.news.naver.com/article/021/0002646994"
             },
             {
-              "name": "무슨일보",
-              "description": "이준석 “尹 별난 분…국힘 당대표 김건희 여사가 되지않는한 당 가만히 놔두지 않을것”",
-              "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
+              "name": "국민일보",
+              "description": "남원 학교 식중독 의심환자 1000명 넘어… 사흘 만에 800명 급증",
+              "url": "https://n.news.naver.com/article/005/0001708803"
             },
             {
-              "name": "메롱일보",
-              "description": "이준석 “尹 별난 분…국힘 당대표 김건희 여사가 되지않는한 당 가만히 놔두지 않을것”",
-              "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
+              "name": "연합뉴스",
+              "description": "코레일 서울본부 전산센터 불…일부 역 발권기 '먹통'",
+              "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706007900641"
             },
             {
-              "name": "바보일보",
-              "description": "이준석 “尹 별난 분…국힘 당대표 김건희 여사가 되지않는한 당 가만히 놔두지 않을것”",
-              "url": "https://www.yna.co.kr/view/AKR20240703142800530?section=society/all&site=major_news01"
+              "name": "매일경제",
+              "description": "“차라리 알바를 하고 말지”…9급 공무원 초임 월급보니 ‘충격’",
+              "url": "https://www.mk.co.kr/news/society/11060462"
             },
-          ],
-          length: 5
+          ]
         }
       ],
     }
