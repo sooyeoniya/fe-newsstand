@@ -54,7 +54,7 @@
 
         .progress-bar {
             width: 100%;
-            background-color: #4362D0;
+            background-color: var(--color-main-color);
         }
 
         .page-title, .page-info {

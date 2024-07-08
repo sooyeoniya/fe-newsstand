@@ -1,6 +1,57 @@
 import { TAB_NEWS_DATA } from "../../data/tabNewsData.js";
 
-function handleSubscribeButtonClick(event) {
+function showToast(message) {
+  const container = document.querySelector('.container');
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add('show');
+  });
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+    toast.addEventListener('transitionend', () => {
+      toast.remove();
+    }, { once: true });
+  }, 5000);
+}
+
+function showConfirmation(mediaName) {
+  return new Promise((resolve) => {
+    const container = document.querySelector('.container');
+    const confirmation = document.createElement('div');
+    confirmation.className = 'confirmation';
+    confirmation.innerHTML = `
+      <div class="confirm-text">
+        <span class="confirm-media">${mediaName}</span>
+        <span class="confirm-description">을(를)</br>구독해지하시겠습니까?</span>
+      </div>
+      <div class="confirm-select">
+        <div><button class="confirm-yes">예, 해지합니다</button></div>
+        <div><button class="confirm-no">아니오</button></div>
+      </div>
+    `;
+    container.appendChild(confirmation);
+
+    const confirmYesButton = confirmation.querySelector('.confirm-yes');
+    const confirmNoButton = confirmation.querySelector('.confirm-no');
+
+    confirmYesButton.addEventListener('click', () => {
+      confirmation.remove();
+      resolve(true);
+    });
+
+    confirmNoButton.addEventListener('click', () => {
+      confirmation.remove();
+      resolve(false);
+    });
+  });
+}
+
+async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;
   const mediaName = subscribeButton.dataset.mediaName;
   const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus'));
@@ -8,9 +59,13 @@ function handleSubscribeButtonClick(event) {
   if (subscriptionStatus[mediaName] === 'N') {
     subscriptionStatus[mediaName] = 'Y';
     subscribeButton.textContent = 'x';
+    showToast('내가 구독한 언론사에 추가되었습니다.');
   } else {
-    subscriptionStatus[mediaName] = 'N';
-    subscribeButton.textContent = '+ 구독하기';
+    const confirmed = await showConfirmation(mediaName);
+    if (confirmed) {
+      subscriptionStatus[mediaName] = 'N';
+      subscribeButton.textContent = '+ 구독하기';
+    }
   }
 
   localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));

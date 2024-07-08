@@ -63,7 +63,7 @@
     width: 320px;
     &:hover {
         text-decoration: underline;
-        text-decoration-color: #4B5966;
+        text-decoration-color: var(--color-decoration);
     }
 }
 
@@ -81,12 +81,12 @@
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-regular);
     margin-bottom: 16px;
-    color: #4B5966;
+    color: var(--color-decoration);
     cursor: pointer;
 
     &:hover {
         text-decoration: underline;
-        text-decoration-color: #4B5966;
+        text-decoration-color: var(--color-decoration);
     }
 }
 
