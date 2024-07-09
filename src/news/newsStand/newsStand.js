@@ -1,13 +1,17 @@
-import { TAB_NEWS_DATA } from "../../data/tabNewsData.js";
+import { getTabsNews } from "../../api/NewsAPI.js";
 import { initNewsContentRenderer } from "./newsList.js";
 import { initTabManager } from "./newsTab.js";
 
-function initNewsTabs() {
+async function initNewsTabs() {
   const tabsContainer = document.querySelector('.news-tabs');
-  const newsTabs = TAB_NEWS_DATA.data[0].newsTabs;
 
-  initTabManager(tabsContainer, newsTabs);
-  initNewsContentRenderer();
+  try {
+    const newsTabs = await getTabsNews();
+    initTabManager(tabsContainer, newsTabs);
+    initNewsContentRenderer();
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 initNewsTabs();
