@@ -77,9 +77,8 @@ async function renderNewsContent() {
   if (!activeTab) return;
 
   const activeCategory = activeTab.getAttribute('data-tab');
-
   try {
-    const activeTabData = await getTabsNews().then(newsTabs => newsTabs.find(tab => tab.category === activeCategory));
+    const activeTabData = await getTabsNews(activeCategory);
     if (!activeTabData) return;
 
     const pageInfo = activeTab.querySelector('.page-info');
