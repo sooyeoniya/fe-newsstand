@@ -1,8 +1,7 @@
-const NEWS_API_URL_1 = 'http://localhost:3001';
-const NEWS_API_URL_2 = 'http://localhost:3002';
+const NEWS_API_URL = 'http://localhost:3000';
 
 export function getTopNews() {
-  return fetch(`${NEWS_API_URL_1}/topNewsData`)
+  return fetch(`${NEWS_API_URL}/topNewsData`)
     .then(response => response.json())
     .catch(error => {
       console.error(error);
@@ -11,7 +10,7 @@ export function getTopNews() {
 }
 
 export function getTabsNews(category = null) {
-  let url = `${NEWS_API_URL_2}/tabNewsData`;
+  let url = `${NEWS_API_URL}/tabNewsData`;
   if (category) url += `?category=${category}`;
 
   return fetch(url)

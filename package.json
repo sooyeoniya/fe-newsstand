@@ -6,15 +6,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve-json-1": "json-server --watch src/data/data1.json --port 3001",
-    "serve-json-2": "json-server --watch src/data/data2.json --port 3002",
-    "serve-jsons": "concurrently \"npm run serve-json-1\" \"npm run serve-json-2\""
+    "serve-json": "json-server --watch data.json --port 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.2.2",
     "json-server": "^1.0.0-beta.1"
   }
 }
