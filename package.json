@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve-json-1": "json-server --watch data/data1.json --port 3001",
-    "serve-json-2": "json-server --watch data/data2.json --port 3002",
+    "serve-json-1": "json-server --watch src/data/data1.json --port 3001",
+    "serve-json-2": "json-server --watch src/data/data2.json --port 3002",
     "serve-jsons": "concurrently \"npm run serve-json-1\" \"npm run serve-json-2\""
   },
   "keywords": [],
