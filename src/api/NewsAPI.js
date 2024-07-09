@@ -1,4 +1,4 @@
-const NEWS_API_URL = 'http://localhost:3000';
+const NEWS_API_URL = import.meta.env.VITE_NEWS_API_URL;
 
 export function getTopNews() {
   return fetch(`${NEWS_API_URL}/topNewsData`)
