@@ -1,19 +1,18 @@
-const NEWS_API_URL = 'http://localhost:3000';
+const NEWS_API_URL_1 = 'http://localhost:3001';
+const NEWS_API_URL_2 = 'http://localhost:3002';
 
 export function getTopNews() {
-  return fetch(`${NEWS_API_URL}/data`)
+  return fetch(`${NEWS_API_URL_1}/topNewsData`)
     .then(response => response.json())
-    .then(data => data[0].topNews)
     .catch(error => {
       console.error(error);
       throw error;
     });
 }
 
-export function getNewsTabs() {
-  return fetch(`${NEWS_API_URL}/data`)
+export function getTabsNews() {
+  return fetch(`${NEWS_API_URL_2}/tabNewsData`)
     .then(response => response.json())
-    .then(data => data[0].newsTabs)
     .catch(error => {
       console.error(error);
       throw error;

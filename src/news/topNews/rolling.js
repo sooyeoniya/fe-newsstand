@@ -3,7 +3,7 @@ import { getTopNews } from "../../api/NewsAPI.js";
 async function renderTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);
   const rollingList = topNewsItem.querySelector('.rolling');
-  const allNews = await getTopNews().then(topNews => topNews[idx].newsLists);
+  const allNews = await getTopNews().then(data => data[idx].newsLists);
 
   rollingList.innerHTML = allNews.map(news => `
    <li>
