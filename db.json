@@ -1,6 +1,66 @@
-export const TAB_NEWS_DATA = {
-  data: [
+{
+  "data": [
     {
+      "topNews": [
+        {
+          "newsLists": [
+            {
+              "name": "아시아경제",
+              "description": "\"내가 누군지 알아?\"…지각해 비행기 못타자 난동피운 정치인",
+              "url": "https://www.asiae.co.kr/article/2024070508173074446"
+            },
+            {
+              "name": "MBN",
+              "description": "이란 대통령에 개혁파 페제시키안 당선…55% 득표",
+              "url": "https://www.mbn.co.kr/news/world/5039703"
+            },
+            {
+              "name": "조선일보",
+              "description": "서울역 인근서 80대 운전자 인도 돌진…시민 2명 차로 치어",
+              "url": "https://n.news.naver.com/article/023/0003844628"
+            },
+            {
+              "name": "동아일보",
+              "description": "“사이판 수영장서 1초만에 전신마비”…무사 귀국한 유튜버의 뒷 이야기",
+              "url": "https://n.news.naver.com/article/020/0003574811"
+            },
+            {
+              "name": "서울신문",
+              "description": "대낮 길거리서 60대母 둔기로 폭행한 30대 아들 체포",
+              "url": "https://n.news.naver.com/article/081/0003462895"
+            }
+          ]
+        },
+        {
+          "newsLists": [
+            {
+              "name": "한겨레",
+              "description": "‘김건희’ 전면 등장 이상한 전당대회…한동훈과 진실 공방 번지나",
+              "url": "https://n.news.naver.com/article/028/0002696883"
+            },
+            {
+              "name": "문화일보",
+              "description": "주유소 기름값 2주 연속 상승…전국 평균 ‘1682.2원’",
+              "url": "https://n.news.naver.com/article/021/0002646994"
+            },
+            {
+              "name": "국민일보",
+              "description": "남원 학교 식중독 의심환자 1000명 넘어… 사흘 만에 800명 급증",
+              "url": "https://n.news.naver.com/article/005/0001708803"
+            },
+            {
+              "name": "연합뉴스",
+              "description": "코레일 서울본부 전산센터 불…일부 역 발권기 '먹통'",
+              "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706007900641"
+            },
+            {
+              "name": "매일경제",
+              "description": "“차라리 알바를 하고 말지”…9급 공무원 초임 월급보니 ‘충격’",
+              "url": "https://www.mk.co.kr/news/society/11060462"
+            }
+          ]
+        }
+      ],
       "newsTabs": [
         {
           "tabName": "종합/경제",
@@ -39,7 +99,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "허웅 정당방위 주장에 \"양측 모두 폭행으로 처벌 가능\"", "url": "https://www.ytn.co.kr/_cs/_ln_0103_202407061255278223_005.html"},
                 {"newsTitle": "크로아티아 한국 관광객↑...동포 자영업자들도 기대감", "url": "https://www.ytn.co.kr/_cs/_ln_0104_202407061124456629_005.html"},
                 {"newsTitle": "부산 해수욕장 전면 개장...해무·파도에 입수 통제", "url": "https://www.ytn.co.kr/_cs/_ln_0115_202407061555440602_005.html"},
-                {"newsTitle": "러시아, 우크라이나 에너지 시설 공격 재개", "url": "https://www.ytn.co.kr/_cs/_ln_0104_202407061738147756_005.html"},
+                {"newsTitle": "러시아, 우크라이나 에너지 시설 공격 재개", "url": "https://www.ytn.co.kr/_cs/_ln_0104_202407061738147756_005.html"}
               ]
             },
             {
@@ -57,7 +117,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "민주, 경찰 '임성근 불송치' 의견에 \"대통령 입맛에 맞춘 요식 행위\"", "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1007712009"},
                 {"newsTitle": "\"역주행인 줄 몰랐다\"…충돌 직전에야 \"어, 어!\"", "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1007711584"},
                 {"newsTitle": "\"드디어 사고 났다\" SNS 대화방서 환호…53명 검거", "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1007711595"},
-                {"newsTitle": "울산 '식수원' 회야댐 상류서 물고기 수십마리 잇단 폐사", "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1007712071"},
+                {"newsTitle": "울산 '식수원' 회야댐 상류서 물고기 수십마리 잇단 폐사", "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1007712071"}
               ]
             }
           ]
@@ -81,7 +141,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "“가서 앉아있으면 되나”…현금 5천만원 발견된 아파트 화단서 또 나왔다", "url": "https://www.mk.co.kr/news/society/11060440"},
                 {"newsTitle": "“몸에서 냄새 나잖아”…직장 동료 세탁기에 강제로 넣고 돌린 日남성", "url": "https://www.mk.co.kr/news/world/11060523"},
                 {"newsTitle": "“쌍욕하다 걸리면 껍데기 벗기겠다”…어느 식당 주인의 경고문, 왜?", "url": "https://www.mk.co.kr/news/society/11060502"},
-                {"newsTitle": "24개 학교서 1000여명 식중독 의심…김치 하나에 난리 난 남원시", "url": "https://www.mk.co.kr/news/society/11060486"},
+                {"newsTitle": "24개 학교서 1000여명 식중독 의심…김치 하나에 난리 난 남원시", "url": "https://www.mk.co.kr/news/society/11060486"}
               ]
             },
             {
@@ -99,7 +159,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "코레일 서울본부 전산센터 불…일부 역 발권기 '먹통'", "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706007900641"},
                 {"newsTitle": "사건·사고로 얼룩진 美 독립기념일…최소 26명 사망", "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706006000641"},
                 {"newsTitle": "바이든 '설욕전' 조기 성사되나…\"트럼프 제안 수용할 것\"", "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706008300032"},
-                {"newsTitle": "[단독] 온라인수출 1위는 음반 쇼핑몰…K팝이 쿠팡 추월해", "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706000400641"},
+                {"newsTitle": "[단독] 온라인수출 1위는 음반 쇼핑몰…K팝이 쿠팡 추월해", "url": "https://www.yonhapnewstv.co.kr/news/MYH20240706000400641"}
               ]
             },
             {
@@ -117,7 +177,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "바이든 “나 40살처럼 보이지 않나”…연설서 두 차례나 강조", "url": "https://www.segye.com/newsView/20240706504090"},
                 {"newsTitle": "몸값 높아지는 서울 ‘소형 아파트’…사회초년생 주거 부담 강화 우려도", "url": "https://www.segye.com/newsView/20240705511297"},
                 {"newsTitle": "[내일날씨] 습하고 더운 날씨 지속…충청·남부지방 강한 비", "url": "https://www.segye.com/newsView/20240706504922"},
-                {"newsTitle": "이번엔 서울역서 80대 운전자가…행인 2명 치고, 벽 들이받은 후 멈춰", "url": "https://www.segye.com/newsView/20240706504441"},
+                {"newsTitle": "이번엔 서울역서 80대 운전자가…행인 2명 치고, 벽 들이받은 후 멈춰", "url": "https://www.segye.com/newsView/20240706504441"}
               ]
             }
           ]
@@ -141,7 +201,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "붉은 피로 물든 바다…해변서 놀던 美 여성, 상어에게 물렸다", "url": "https://n.news.naver.com/article/023/0003844602"},
                 {"newsTitle": "이들의 잘못된 만남…좋아하는 사람 만났다고 친구 폭행·감금한 20대", "url": "https://n.news.naver.com/article/023/0003844636"},
                 {"newsTitle": "‘갑질 의혹’ 강형욱, 사실상 본업 복귀…반려견 교육 유튜브 재개", "url": "https://n.news.naver.com/article/023/0003844635"},
-                {"newsTitle": "日 지하철 탔다가 나비 크기에 식겁...어떻길래", "url": "https://n.news.naver.com/article/023/0003844627"},
+                {"newsTitle": "日 지하철 탔다가 나비 크기에 식겁...어떻길래", "url": "https://n.news.naver.com/article/023/0003844627"}
               ]
             },
             {
@@ -159,7 +219,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "“이 길을 어떻게 오르라고” 상명대 ‘지옥의 오르막’ 버스 중단 고심", "url": "https://n.news.naver.com/article/020/0003574793"},
                 {"newsTitle": "점당 200원 ‘고스톱’ 쳤다가 법정 선 70대 노인들…법원 “심심풀이·치매예방”", "url": "https://n.news.naver.com/article/020/0003574801"},
                 {"newsTitle": "“얼마나 피로했을까”…시청역 앞 놓인 ‘숙취해소제’에 울컥", "url": "https://n.news.naver.com/article/020/0003574658"},
-                {"newsTitle": "“손흥민 떴다!” 동네 축구장에 깜짝등장…순식간 2000명 몰려 경찰투입", "url": "https://n.news.naver.com/article/020/0003574795"},
+                {"newsTitle": "“손흥민 떴다!” 동네 축구장에 깜짝등장…순식간 2000명 몰려 경찰투입", "url": "https://n.news.naver.com/article/020/0003574795"}
               ]
             }
           ]
@@ -183,7 +243,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "한동훈, 김건희 문자 ‘읽씹’ 논란 “사적대화 부적절”…나경원 “구차 변명”", "url": "https://n.news.naver.com/article/081/0003462886"},
                 {"newsTitle": "“소변색이 왜이래” 운동 열심히 했는데…갑자기 ‘콜라색’ 된 이유", "url": "https://n.news.naver.com/article/081/0003462884"},
                 {"newsTitle": "“노인네들 운전대 잡지마라”…시청역 사고 후 ‘노인 비하’ 도 넘었다", "url": "https://n.news.naver.com/article/081/0003462880"},
-                {"newsTitle": "진성준 “어디다 대고” 배현진 “뭐 뭐 쳐봐”…몸싸움 직전 일촉즉발", "url": "https://n.news.naver.com/article/081/0003462879"},
+                {"newsTitle": "진성준 “어디다 대고” 배현진 “뭐 뭐 쳐봐”…몸싸움 직전 일촉즉발", "url": "https://n.news.naver.com/article/081/0003462879"}
               ]
             },
             {
@@ -201,7 +261,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "임성근 빠진 경찰 수사심의…“시간 끌더니 대통령 입맛대로”", "url": "https://n.news.naver.com/article/028/0002696925"},
                 {"newsTitle": "코레일 서울본부 전산실 화재…전국 대부분 역 현장발권 차질", "url": "https://n.news.naver.com/article/028/0002696921"},
                 {"newsTitle": "백화점이 돈 풀자 이불집·반찬집·정육점 사장님 줄줄이 검찰청으로", "url": "https://n.news.naver.com/article/028/0002696917"},
-                {"newsTitle": "서방 관계 개선·히잡 완화 공약…이란 대선, 개혁파 후보 당선", "url": "https://n.news.naver.com/article/028/0002696924"},
+                {"newsTitle": "서방 관계 개선·히잡 완화 공약…이란 대선, 개혁파 후보 당선", "url": "https://n.news.naver.com/article/028/0002696924"}
               ]
             }
           ]
@@ -225,7 +285,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "‘네카오’ 시총 올해 15조 증발…외국인 보유율 감소", "url": "https://n.news.naver.com/article/021/0002647000"},
                 {"newsTitle": "주유소 기름값 2주 연속 상승…전국 평균 ‘1682.2원’", "url": "https://n.news.naver.com/article/021/0002646994"},
                 {"newsTitle": "“재료값 내려갔다고 삼계탕 가격이 싸질까요?” 아니예요", "url": "https://n.news.naver.com/article/021/0002646981"},
-                {"newsTitle": "‘9만전자 눈 앞’…삼성전자 3% 급등해 3년5개월만에 최고치", "url": "https://n.news.naver.com/article/021/0002646958"},
+                {"newsTitle": "‘9만전자 눈 앞’…삼성전자 3% 급등해 3년5개월만에 최고치", "url": "https://n.news.naver.com/article/021/0002646958"}
               ]
             },
             {
@@ -243,7 +303,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "이번엔 서울역 인근서… 80대 운전자 차량 인도 덮쳐\n", "url": "https://n.news.naver.com/article/005/0001708807"},
                 {"newsTitle": "바이든 “내가 트럼프 이길 것”…신체검사는 ‘거부’", "url": "https://n.news.naver.com/article/005/0001708800"},
                 {"newsTitle": "“손흥민, 용인 조축 떴다” 2천명 몰려 난리…경찰 출동", "url": "https://n.news.naver.com/article/005/0001708792"},
-                {"newsTitle": "‘채상병 사건’ 경찰 심의위 “임성근 전 사단장 불송치”", "url": "https://n.news.naver.com/article/005/0001708796"},
+                {"newsTitle": "‘채상병 사건’ 경찰 심의위 “임성근 전 사단장 불송치”", "url": "https://n.news.naver.com/article/005/0001708796"}
               ]
             }
           ]
@@ -267,7 +327,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "아버지도 버린 노소영의 '1조3808억', 노태우 회고록엔… [데스크 칼럼]", "url": "https://www.dailian.co.kr/news/view/1380187/"},
                 {"newsTitle": "안산 학원 화장실서 여고생 찌른 남학생 결국 사망", "url": "https://www.dailian.co.kr/news/view/1380218/"},
                 {"newsTitle": "한동훈이 던진 '채상병 특검 수정안'…당심 움직일 카드될까 [정국 기상대]", "url": "https://www.dailian.co.kr/news/view/1379985/"},
-                {"newsTitle": "사고만 나면 급발진?…가속페달 7번 밟고 '급발진 주장' 사례도", "url": "https://www.dailian.co.kr/news/view/1380221/"},
+                {"newsTitle": "사고만 나면 급발진?…가속페달 7번 밟고 '급발진 주장' 사례도", "url": "https://www.dailian.co.kr/news/view/1380221/"}
               ]
             },
             {
@@ -285,7 +345,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "'교섭단체 요건 완화' 목소리 키우지만…등 돌린 '국힘·민주'", "url": "https://www.inews24.com/view/1738883"},
                 {"newsTitle": "尹, 3년 연속 나토정상회의 참석…다음주 방미", "url": "https://www.inews24.com/view/1738847"},
                 {"newsTitle": "검찰총장, '검사 탄핵' 위법성 검토에…민주당 \"내란행위\"", "url": "https://www.inews24.com/view/1738740"},
-                {"newsTitle": "반지하주택 문제 어떻게 할 것인가?…경기도, 12일 국회서 토론회", "url": "https://www.inews24.com/view/1738542"},
+                {"newsTitle": "반지하주택 문제 어떻게 할 것인가?…경기도, 12일 국회서 토론회", "url": "https://www.inews24.com/view/1738542"}
               ]
             }
           ]
@@ -309,7 +369,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "조정훈-장경태-천하람이 본 '한동훈-김건희 문자 논란'", "url": "https://www.mbn.co.kr/news/society/5039575"},
                 {"newsTitle": "한동훈 '배신자론'…김건희 여사 문자 무시 때문이었나?", "url": "https://www.mbn.co.kr/news/society/5039574"},
                 {"newsTitle": "이란 대통령에 개혁파 페제시키안 당선…55% 득표", "url": "https://www.mbn.co.kr/news/world/5039703"},
-                {"newsTitle": "바이든 \"사퇴 없다. 인지력 검사 필요 없어\" 정면 돌파", "url": "https://www.mbn.co.kr/news/world/5039696"},
+                {"newsTitle": "바이든 \"사퇴 없다. 인지력 검사 필요 없어\" 정면 돌파", "url": "https://www.mbn.co.kr/news/world/5039696"}
               ]
             },
             {
@@ -327,7 +387,7 @@ export const TAB_NEWS_DATA = {
                 {"newsTitle": "주차비 아까워 앞차 꽁무니 '바짝'…3억 벤틀리의 꼼수", "url": "https://www.asiae.co.kr/article/2024070514003800977"},
                 {"newsTitle": "\"냄새난다\"며 지적장애 동료 세탁기에 넣어…\"정신나갔다\" 日 공분", "url": "https://www.asiae.co.kr/article/2024070509362498806"},
                 {"newsTitle": "\"개 찾아주고 한달 500만원 이상 법니다\"…중국서 뜨는 직업", "url": "https://www.asiae.co.kr/article/2024070510191072960"},
-                {"newsTitle": "연일 사상최고치 인도증시…월가 “고점 멀었다” 하는 이유", "url": "https://www.asiae.co.kr/article/world-economy/2024070510185366615"},
+                {"newsTitle": "연일 사상최고치 인도증시…월가 “고점 멀었다” 하는 이유", "url": "https://www.asiae.co.kr/article/world-economy/2024070510185366615"}
               ]
             }
           ]

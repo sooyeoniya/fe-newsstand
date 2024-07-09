@@ -1,9 +1,9 @@
-import { TOP_NEWS_DATA } from "../../data/topNewsData.js";
+import { getNewsData } from "../../api/NewsAPI.js";
 
-function renderTopNews(idx, topNewsItemId) {
+async function renderTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);
   const rollingList = topNewsItem.querySelector('.rolling');
-  const allNews = TOP_NEWS_DATA.data[0].topNews[idx].newsLists;
+  const allNews = await getNewsData().then(topNews => topNews[0].topNews[idx].newsLists);
 
   rollingList.innerHTML = allNews.map(news => `
    <li>
@@ -17,9 +17,9 @@ function renderTopNews(idx, topNewsItemId) {
   return rollingList;
 }
 
-function startRolling() {
-  const rollingList1 = renderTopNews(0, 'top-news-item-1');
-  const rollingList2 = renderTopNews(1, 'top-news-item-2');
+async function startRolling() {
+  const rollingList1 = await renderTopNews(0, 'top-news-item-1');
+  const rollingList2 = await renderTopNews(1, 'top-news-item-2');
 
   function roll(list) {
     const itemHeight = list.children[0].offsetHeight;
