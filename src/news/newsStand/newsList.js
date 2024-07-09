@@ -85,6 +85,7 @@ async function renderNewsContent() {
     const pageInfo = activeTab.querySelector('.page-info');
     const currentPage = parseInt(pageInfo.textContent.split('/')[0], 10) - 1;
     const newsItem = activeTabData.tabData[currentPage];
+    if (!newsItem) return;
 
     const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus'));
 
