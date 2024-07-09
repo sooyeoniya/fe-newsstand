@@ -1,4 +1,4 @@
-import { getNewsData } from "../../api/NewsAPI.js";
+import { getNewsTabs } from "../../api/NewsAPI.js";
 
 function showToast(message) {
   const container = document.querySelector('.container');
@@ -79,7 +79,7 @@ async function renderNewsContent() {
   const activeCategory = activeTab.getAttribute('data-tab');
 
   try {
-    const activeTabData = await getNewsData().then(newsTabs => newsTabs[0].newsTabs.find(tab => tab.category === activeCategory));
+    const activeTabData = await getNewsTabs().then(newsTabs => newsTabs.find(tab => tab.category === activeCategory));
     if (!activeTabData) return;
 
     const pageInfo = activeTab.querySelector('.page-info');
