@@ -51,6 +51,21 @@ function showConfirmation(mediaName) {
   });
 }
 
+async function initializeSubscriptionStatus() {
+  const subscriptionStatus = {};
+  try {
+    const newsTabs = await getTabsNews();
+    newsTabs.forEach(tab => {
+      tab.tabData.forEach(newsItem => {
+        subscriptionStatus[newsItem.mediaName] = 'N';
+      });
+    });
+    localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;
   const mediaName = subscribeButton.dataset.mediaName;
@@ -86,7 +101,12 @@ async function renderNewsContent() {
     const newsItem = activeTabData.tabData[currentPage];
     if (!newsItem) return;
 
-    const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus'));
+    const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus')) || {};
+
+    if (!subscriptionStatus[newsItem.mediaName]) {
+      subscriptionStatus[newsItem.mediaName] = 'N';
+      localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
+    }
 
     newsContainer.innerHTML = `
       <div class="news-list">
@@ -129,7 +149,10 @@ async function renderNewsContent() {
   }
 }
 
-function initNewsContentRenderer() {
+async function initNewsContentRenderer() {
+  if (!localStorage.getItem('subscriptionStatus')) {
+    await initializeSubscriptionStatus();
+  }
   renderNewsContent();
 }
 
