@@ -7,11 +7,11 @@ async function initNewsTabs() {
 
   try {
     const newsTabs = await getTabsNews();
-    initTabManager(tabsContainer, newsTabs);
+    await initTabManager(tabsContainer, newsTabs);
     await initNewsListRenderer();
   } catch (error) {
     console.error(error);
   }
 }
 
-initNewsTabs();
+await initNewsTabs();

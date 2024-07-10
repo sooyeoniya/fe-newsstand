@@ -137,7 +137,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
   }
 }
 
-function initTabManager(tabsContainer, newsTabs) {
+async function initTabManager(tabsContainer, newsTabs) {
   const tabState = {
     pageCount: 1,
     activeTabIndex: 0
