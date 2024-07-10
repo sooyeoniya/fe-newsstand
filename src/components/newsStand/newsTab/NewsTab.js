@@ -1,4 +1,5 @@
 import { initNewsContentRenderer } from "../newsList/NewsList.js";
+import { addArrowButtonClickListener } from "../../button/ButtonEvents.js";
 
 function renderTabButton(tabData, index, tabState) {
   const tabButton = document.createElement('button');
@@ -136,54 +137,6 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
   }
 }
 
-function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
-  const leftButton = document.querySelector('.left-btn');
-  const rightButton = document.querySelector('.right-btn');
-
-  leftButton.addEventListener('click', () => {
-    const tabs = tabsContainer.querySelectorAll('.tab');
-    const activeTabIndex = tabState.activeTabIndex;
-    const activeTab = tabs[activeTabIndex];
-
-    const animationId = parseInt(activeTab.dataset.animationId);
-    if (animationId) {
-      cancelAnimationFrame(animationId);
-      delete activeTab.dataset.animationId;
-    }
-
-    tabState.pageCount--;
-    if (tabState.pageCount < 1) {
-      const prevTabIndex = (activeTabIndex - 1 + tabs.length) % tabs.length;
-      tabState.activeTabIndex = prevTabIndex;
-      tabState.pageCount = newsTabs[prevTabIndex].tabData.length;
-    }
-
-    updateActiveTab(tabsContainer, newsTabs, tabState);
-  });
-
-  rightButton.addEventListener('click', () => {
-    const tabs = tabsContainer.querySelectorAll('.tab');
-    const activeTabIndex = tabState.activeTabIndex;
-    const tabData = newsTabs[activeTabIndex];
-    const activeTab = tabs[activeTabIndex];
-
-    const animationId = parseInt(activeTab.dataset.animationId);
-    if (animationId) {
-      cancelAnimationFrame(animationId);
-      delete activeTab.dataset.animationId;
-    }
-
-    tabState.pageCount++;
-    if (tabState.pageCount > tabData.tabData.length) {
-      const nextTabIndex = (activeTabIndex + 1) % tabs.length;
-      tabState.activeTabIndex = nextTabIndex;
-      tabState.pageCount = 1;
-    }
-
-    updateActiveTab(tabsContainer, newsTabs, tabState);
-  });
-}
-
 function initTabManager(tabsContainer, newsTabs) {
   const tabState = {
     pageCount: 1,
@@ -196,4 +149,4 @@ function initTabManager(tabsContainer, newsTabs) {
   addArrowButtonClickListener(tabsContainer, newsTabs, tabState);
 }
 
-export { initTabManager };
+export { initTabManager, updateActiveTab };
