@@ -4,12 +4,8 @@ export default function Button(className, imageSrc, altText) {
   const button = document.createElement("button");
   button.className = className;
 
-  const image = document.createElement("img");
-  image.src = imageSrc;
-  image.alt = altText;
-  image.className = `${className.split("-")[0]}-arrow`;
-
-  button.appendChild(image);
+  const arrowClassName = `${className.split("-")[0]}-arrow`;
+  button.innerHTML = `<img src="${imageSrc}" alt="${altText}" class="${arrowClassName}">`;
 
   return button;
 }
