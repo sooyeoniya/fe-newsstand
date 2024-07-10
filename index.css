@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'Pretendard-Variable';
-    src: url('../font/PretendardVariable.woff2') format('woff2');
+    src: url('src/font/PretendardVariable.woff2') format('woff2');
     font-weight: var(--font-weight-regular) var(--font-weight-bold);
     font-style: normal;
 }
