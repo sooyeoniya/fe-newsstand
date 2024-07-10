@@ -1,6 +1,7 @@
 import { renderToast } from "../alerts/ToastMessage.js";
 import { renderNotification } from "../alerts/Notification.js";
 
+// TODO: 해체할당과 이름바꾸기 방법으로 수정
 async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;
   const mediaName = subscribeButton.dataset.mediaName;

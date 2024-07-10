@@ -1,5 +1,6 @@
 import "./Alerts.css";
 
+// TODO: 이벤트 위임 방식 적용
 function renderNotification(mediaName) {
   return new Promise((resolve) => {
     const container = document.querySelector('.container');
