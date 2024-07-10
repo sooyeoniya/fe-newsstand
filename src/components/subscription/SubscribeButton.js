@@ -1,5 +1,5 @@
-import { renderToast } from "../../alerts/ToastMessage.js";
-import { renderNotification } from "../../alerts/Notification.js";
+import { renderToast } from "../alerts/ToastMessage.js";
+import { renderNotification } from "../alerts/Notification.js";
 
 async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;

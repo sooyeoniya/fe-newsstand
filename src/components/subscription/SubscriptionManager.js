@@ -1,4 +1,4 @@
-import {getTabsNews} from "../../../apis/NewsAPI.js";
+import {getTabsNews} from "../../apis/NewsAPI.js";
 
 async function initializeSubscriptionStatus() {
   const subscriptionStatus = {};

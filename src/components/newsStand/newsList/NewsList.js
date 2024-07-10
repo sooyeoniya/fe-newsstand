@@ -1,6 +1,6 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
-import { initializeSubscriptionStatus } from "../subscription/SubscriptionManager.js";
-import { handleSubscribeButtonClick } from "../subscription/SubscribeButton.js";
+import { initializeSubscriptionStatus } from "../../subscription/SubscriptionManager.js";
+import { handleSubscribeButtonClick } from "../../subscription/SubscribeButton.js";
 
 async function renderNewsContent() {
   const newsContainer = document.querySelector('.news-container');
