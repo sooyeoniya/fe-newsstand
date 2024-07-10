@@ -1,23 +1,5 @@
 import { getTabsNews } from "../../apis/NewsAPI.js";
-
-function showToast(message) {
-  const container = document.querySelector('.container');
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.textContent = message;
-  container.appendChild(toast);
-
-  requestAnimationFrame(() => {
-    toast.classList.add('show');
-  });
-
-  setTimeout(() => {
-    toast.classList.remove('show');
-    toast.addEventListener('transitionend', () => {
-      toast.remove();
-    }, { once: true });
-  }, 5000);
-}
+import { renderToast } from "../../components/alerts/ToastMessage.js";
 
 function showConfirmation(mediaName) {
   return new Promise((resolve) => {
@@ -74,7 +56,7 @@ async function handleSubscribeButtonClick(event) {
   if (subscriptionStatus[mediaName] === 'N') {
     subscriptionStatus[mediaName] = 'Y';
     subscribeButton.textContent = 'x';
-    showToast('내가 구독한 언론사에 추가되었습니다.');
+    renderToast('내가 구독한 언론사에 추가되었습니다.');
   } else {
     const confirmed = await showConfirmation(mediaName);
     if (confirmed) {
