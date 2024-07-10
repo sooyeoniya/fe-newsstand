@@ -1,4 +1,5 @@
 import { getTopNews } from "../../apis/NewsAPI.js";
+import "./Headlines.css";
 
 async function renderTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);
