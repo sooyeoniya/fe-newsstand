@@ -1,5 +1,5 @@
 
-function mediaButtonControl() {
+function mediaButtonEvents() {
   const mediaTotalButton = document.querySelector('.media-total');
   const mediaMyButton = document.querySelector('.media-my');
   const mediaTotalView = document.querySelector('.media-total-view');
@@ -20,4 +20,4 @@ function mediaButtonControl() {
   });
 }
 
-mediaButtonControl();
+mediaButtonEvents();
