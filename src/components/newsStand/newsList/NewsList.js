@@ -1,41 +1,6 @@
-import { getTabsNews } from "../../apis/NewsAPI.js";
-import { renderToast } from "../../components/alerts/ToastMessage.js";
-import { renderNotification } from "../../components/alerts/Notification.js";
-
-async function initializeSubscriptionStatus() {
-  const subscriptionStatus = {};
-  try {
-    const newsTabs = await getTabsNews();
-    newsTabs.forEach(tab => {
-      tab.tabData.forEach(newsItem => {
-        subscriptionStatus[newsItem.mediaName] = 'N';
-      });
-    });
-    localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-async function handleSubscribeButtonClick(event) {
-  const subscribeButton = event.target;
-  const mediaName = subscribeButton.dataset.mediaName;
-  const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus'));
-
-  if (subscriptionStatus[mediaName] === 'N') {
-    subscriptionStatus[mediaName] = 'Y';
-    subscribeButton.textContent = 'x';
-    renderToast('내가 구독한 언론사에 추가되었습니다.');
-  } else {
-    const confirmed = await renderNotification(mediaName);
-    if (confirmed) {
-      subscriptionStatus[mediaName] = 'N';
-      subscribeButton.textContent = '+ 구독하기';
-    }
-  }
-
-  localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
-}
+import { getTabsNews } from "../../../apis/NewsAPI.js";
+import { initializeSubscriptionStatus } from "../subscription/SubscriptionManager.js";
+import { handleSubscribeButtonClick } from "../subscription/SubscribeButton.js";
 
 async function renderNewsContent() {
   const newsContainer = document.querySelector('.news-container');

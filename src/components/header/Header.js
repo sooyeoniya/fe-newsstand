@@ -1,4 +1,4 @@
-import { formatDate } from "../../utils/dateUtils.js";
+import { formatDate } from "../../utils/DateUtils.js";
 import "./Header.css";
 
 export default function Header(elementId) {

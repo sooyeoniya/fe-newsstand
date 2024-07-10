@@ -1,4 +1,4 @@
-import { initNewsContentRenderer } from "./newsList.js";
+import { initNewsContentRenderer } from "../newsList/NewsList.js";
 
 function renderTabButton(tabData, index, tabState) {
   const tabButton = document.createElement('button');
@@ -55,11 +55,11 @@ function updateActiveTab(tabsContainer, newsTabs, tabState) {
 
 function updateTabContent(tab, newsTabs, tabState) {
   const tabData = newsTabs[tabState.activeTabIndex];
-  const pageInfo = tab.querySelector('.page-info');
+  const pageInfo = tab.querySelector(".page-info");
   if (pageInfo) {
     pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
   } else {
-    tab.insertAdjacentHTML('beforeend', `
+    tab.insertAdjacentHTML("beforeend", `
       <span class="page-info">${tabState.pageCount}/${tabData.tabData.length}</span>
       <span class="progress-bar"></span>
     `);
@@ -67,16 +67,16 @@ function updateTabContent(tab, newsTabs, tabState) {
 }
 
 function removeTabContent(tab) {
-  const pageInfo = tab.querySelector('.page-info');
-  const progressBar = tab.querySelector('.progress-bar');
+  const pageInfo = tab.querySelector(".page-info");
+  const progressBar = tab.querySelector(".progress-bar");
   if (pageInfo) pageInfo.remove();
   if (progressBar) progressBar.remove();
 }
 
 function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
-  const progressBar = tab.querySelector('.progress-bar');
+  const progressBar = tab.querySelector(".progress-bar");
   if (progressBar) {
-    progressBar.style.width = '0%';
+    progressBar.style.width = "0%";
     const totalDuration = 5000;
     const startTime = performance.now();
 
