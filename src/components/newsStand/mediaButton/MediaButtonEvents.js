@@ -1,3 +1,9 @@
+function toggleMediaView(totalButton, myButton, totalView, myView) {
+  totalButton.classList.toggle('active');
+  myButton.classList.toggle('active');
+  totalView.classList.toggle('active');
+  myView.classList.toggle('active');
+}
 
 function mediaButtonEvents() {
   const mediaTotalButton = document.querySelector('.media-total');
@@ -6,17 +12,11 @@ function mediaButtonEvents() {
   const mediaMyView = document.querySelector('.media-my-view');
 
   mediaTotalButton.addEventListener('click', () => {
-    mediaTotalButton.classList.add('active');
-    mediaMyButton.classList.remove('active');
-    mediaTotalView.classList.add('active');
-    mediaMyView.classList.remove('active');
+    toggleMediaView(mediaTotalButton, mediaMyButton, mediaTotalView, mediaMyView);
   });
 
   mediaMyButton.addEventListener('click', () => {
-    mediaTotalButton.classList.remove('active');
-    mediaMyButton.classList.add('active');
-    mediaTotalView.classList.remove('active');
-    mediaMyView.classList.add('active');
+    toggleMediaView(mediaMyButton, mediaTotalButton, mediaMyView, mediaTotalView);
   });
 }
 
