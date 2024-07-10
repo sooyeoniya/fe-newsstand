@@ -1,6 +1,5 @@
 import "./Alerts.css";
 
-// TODO: 이벤트 위임 방식 적용
 function renderNotification(mediaName) {
   return new Promise((resolve) => {
     const container = document.querySelector('.container');
@@ -18,17 +17,14 @@ function renderNotification(mediaName) {
     `;
     container.appendChild(confirmation);
 
-    const confirmYesButton = confirmation.querySelector('.confirm-yes');
-    const confirmNoButton = confirmation.querySelector('.confirm-no');
-
-    confirmYesButton.addEventListener('click', () => {
-      confirmation.remove();
-      resolve(true);
-    });
-
-    confirmNoButton.addEventListener('click', () => {
-      confirmation.remove();
-      resolve(false);
+    confirmation.addEventListener('click', (event) => {
+      if (event.target.matches('.confirm-yes')) {
+        confirmation.remove();
+        resolve(true);
+      } else if (event.target.matches('.confirm-no')) {
+        confirmation.remove();
+        resolve(false);
+      }
     });
   });
 }
