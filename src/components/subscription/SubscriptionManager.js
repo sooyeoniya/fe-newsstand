@@ -1,6 +1,6 @@
 import {getTabsNews} from "../../apis/NewsAPI.js";
 
-async function initializeSubscriptionStatus() {
+async function initSubscriptionStatus() {
   const subscriptionStatus = {};
   try {
     const newsTabs = await getTabsNews();
@@ -15,4 +15,4 @@ async function initializeSubscriptionStatus() {
   }
 }
 
-export { initializeSubscriptionStatus };
+export { initSubscriptionStatus };

@@ -1,4 +1,4 @@
-import { initNewsContentRenderer } from "../newsList/NewsList.js";
+import { initNewsListRenderer } from "../newsList/NewsListManager.js";
 import { addArrowButtonClickListener } from "../../button/ButtonEvents.js";
 
 function renderTabButton(tabData, index, tabState) {
@@ -51,7 +51,7 @@ function updateActiveTab(tabsContainer, newsTabs, tabState) {
       removeTabContent(tab);
     }
   });
-  initNewsContentRenderer();
+  initNewsListRenderer();
 }
 
 function updateTabContent(tab, newsTabs, tabState) {
@@ -121,7 +121,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
         } else {
           animateProgressBar(tab, tabsContainer, newsTabs, tabState);
         }
-        initNewsContentRenderer();
+        initNewsListRenderer();
       }
     }
 

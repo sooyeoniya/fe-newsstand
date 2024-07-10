@@ -1,5 +1,5 @@
 import { getTabsNews } from "../../apis/NewsAPI.js";
-import { initNewsContentRenderer } from "./newsList/NewsList.js";
+import { initNewsListRenderer } from "./newsList/NewsListManager.js";
 import { initTabManager } from "./newsTab/NewsTab.js";
 
 async function initNewsTabs() {
@@ -8,7 +8,7 @@ async function initNewsTabs() {
   try {
     const newsTabs = await getTabsNews();
     initTabManager(tabsContainer, newsTabs);
-    await initNewsContentRenderer();
+    await initNewsListRenderer();
   } catch (error) {
     console.error(error);
   }
