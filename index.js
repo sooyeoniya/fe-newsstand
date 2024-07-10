@@ -1,4 +1,4 @@
-import "@/news/topMenu/mediaButtonControl.js";
+import "@/components/newsStand/media/MediaButtonControl.js";
 import "@/news/newsStand/newsStand.js";
 
 import Header from "@/components/header/Header.js";
