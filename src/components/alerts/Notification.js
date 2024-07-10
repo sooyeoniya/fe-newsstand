@@ -1,3 +1,4 @@
+import "./Alerts.css";
 
 function renderNotification(mediaName) {
   return new Promise((resolve) => {

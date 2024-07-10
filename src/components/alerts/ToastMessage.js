@@ -1,3 +1,4 @@
+import "./Alerts.css";
 
 function renderToast(message) {
   const container = document.querySelector(".container");
