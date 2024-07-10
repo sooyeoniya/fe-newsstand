@@ -1,4 +1,4 @@
-import { getTopNews } from "../../api/NewsAPI.js";
+import { getTopNews } from "../../apis/NewsAPI.js";
 
 async function renderTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);

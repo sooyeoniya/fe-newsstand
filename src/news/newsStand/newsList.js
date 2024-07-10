@@ -1,4 +1,4 @@
-import { getTabsNews } from "../../api/NewsAPI.js";
+import { getTabsNews } from "../../apis/NewsAPI.js";
 
 function showToast(message) {
   const container = document.querySelector('.container');
