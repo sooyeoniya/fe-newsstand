@@ -1,0 +1,246 @@
+
+.media-view {
+    position: relative;
+    width: 800px;
+}
+
+.news-stand {
+    padding: 20px 0;
+}
+
+.news-container {
+    height: 332px;
+    border: 1px solid var(--color-border);
+}
+
+.news-tabs {
+    display: flex;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-bottom: none;
+    color: var(--color-text-muted);
+    height: 38px;
+}
+
+.tab {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    /* 버튼 기본 속성 제거 */
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    box-shadow: none;
+    overflow: hidden;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    .page-title {
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-regular);
+    }
+
+    &.active {
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        color: #FFFFFF;
+        background-color: #7890E7;
+        text-decoration: none;
+
+        .progress-bar {
+            width: 100%;
+            background-color: var(--color-main-color);
+        }
+
+        .page-title, .page-info {
+            z-index: 1;
+        }
+
+        .page-title {
+            font-weight: 600;
+        }
+
+        .page-info {
+            font-size: var(--font-size-small);
+            font-weight: 400;
+        }
+    }
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #7890E7;
+}
+
+.media-total-view,
+.media-my-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.media-total-view.active,
+.media-my-view.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.news-list {
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    height: 25px;
+}
+
+.news-source {
+    height: 20px;
+    width: 80px;
+}
+
+.news-date {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-second);
+    width: 130px;
+}
+
+.subscribe-button {
+    padding: 5px 9px;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+    background-color: var(--color-background);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid var(--color-border);
+
+    &:hover {
+        border: 2px solid var(--color-border);
+    }
+}
+
+.news-main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.news-thumbnail {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-image {
+    width: 320px;
+    height: 200px;
+    object-fit: cover; /* 화면 채움 */
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+.news-description {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-first);
+    width: 320px;
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-decoration);
+    }
+}
+
+.news-sub-content {
+    width: 440px;
+}
+
+.news-headlines {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headline {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 16px;
+    color: var(--color-decoration);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-decoration);
+    }
+}
+
+.news-disclaimer {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+    margin-top: 10px;
+}
+
+
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.top-menu-media {
+    display: flex;
+    gap: 25px;
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-regular);
+}
+
+.media-total, .media-my {
+    font-size: var(--font-size-large);
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    box-shadow: none;
+
+    &:hover, &.active {
+        font-weight: var(--font-weight-bold);
+        color: var(--color-text-first);
+    }
+}
+
+.top-menu-view {
+    display: flex;
+    gap: 10px;
+}
