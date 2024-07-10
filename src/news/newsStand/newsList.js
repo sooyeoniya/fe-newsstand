@@ -1,37 +1,6 @@
 import { getTabsNews } from "../../apis/NewsAPI.js";
 import { renderToast } from "../../components/alerts/ToastMessage.js";
-
-function showConfirmation(mediaName) {
-  return new Promise((resolve) => {
-    const container = document.querySelector('.container');
-    const confirmation = document.createElement('div');
-    confirmation.className = 'confirmation';
-    confirmation.innerHTML = `
-      <div class="confirm-text">
-        <span class="confirm-media">${mediaName}</span>
-        <span class="confirm-description">을(를)</br>구독해지하시겠습니까?</span>
-      </div>
-      <div class="confirm-select">
-        <div><button class="confirm-yes">예, 해지합니다</button></div>
-        <div><button class="confirm-no">아니오</button></div>
-      </div>
-    `;
-    container.appendChild(confirmation);
-
-    const confirmYesButton = confirmation.querySelector('.confirm-yes');
-    const confirmNoButton = confirmation.querySelector('.confirm-no');
-
-    confirmYesButton.addEventListener('click', () => {
-      confirmation.remove();
-      resolve(true);
-    });
-
-    confirmNoButton.addEventListener('click', () => {
-      confirmation.remove();
-      resolve(false);
-    });
-  });
-}
+import { renderNotification } from "../../components/alerts/Notification.js";
 
 async function initializeSubscriptionStatus() {
   const subscriptionStatus = {};
@@ -58,7 +27,7 @@ async function handleSubscribeButtonClick(event) {
     subscribeButton.textContent = 'x';
     renderToast('내가 구독한 언론사에 추가되었습니다.');
   } else {
-    const confirmed = await showConfirmation(mediaName);
+    const confirmed = await renderNotification(mediaName);
     if (confirmed) {
       subscriptionStatus[mediaName] = 'N';
       subscribeButton.textContent = '+ 구독하기';
