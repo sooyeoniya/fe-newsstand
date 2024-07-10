@@ -1,4 +1,4 @@
-function formatDate() {
+export function formatDate() {
   const today = new Date();
   const days = ['일', '월', '화', '수', '목', '금', '토'];
 
@@ -9,9 +9,3 @@ function formatDate() {
 
   return `${year}. ${month}. ${date}. ${days[day]}요일`;
 }
-
-export function setFormattedDate() {
-  document.querySelector('.header-date').textContent = formatDate();
-}
-
-setFormattedDate();
