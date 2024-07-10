@@ -3,40 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴스 스탠드</title>
+    <title>뉴스스탠드</title>
     <link rel="icon" type="image/x-icon" href="src/assets/favicon.svg">
-    <link rel="stylesheet" href="src/css/base.css">
-    <link rel="stylesheet" href="src/css/layout/button.css">
-    <link rel="stylesheet" href="src/css/layout/header.css">
-    <link rel="stylesheet" href="src/css/news/alert.css">
-    <link rel="stylesheet" href="src/css/news/topNews/rolling.css">
-    <link rel="stylesheet" href="src/css/news/topMenu/menu.css">
-    <link rel="stylesheet" href="src/css/news/topMenu/media.css">
-    <link rel="stylesheet" href="src/css/news/newsStand/newsList.css">
-    <link rel="stylesheet" href="src/css/news/newsStand/newsTab.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/components/newsStand/NewsStand.css">
 </head>
 <body>
 <div class="container">
-    <button class="left-btn">
-        <img src="src/assets/buttons/leftButton.svg" alt="좌측 화살표" class="left-arrow" />
-    </button>
     <div class="main-container">
-        <header class="header">
-            <div class="header-logo">
-                <img src="src/assets/favicon.svg" alt="뉴스 스탠드" />
-                <p>뉴스스탠드</p>
-            </div>
-            <div class="header-date"></div>
-        </header>
-
-        <section class="top-news">
-            <div class="top-news-item" id="top-news-item-1">
-                <ul class="rolling"></ul>
-            </div>
-            <div class="top-news-item" id="top-news-item-2">
-                <ul class="rolling"></ul>
-            </div>
-        </section>
+        <header class="header" id="header"></header>
+        <section class="headline" id="headline"></section>
 
         <nav class="top-menu">
             <div class="top-menu-media">
@@ -64,9 +40,6 @@
             </div>
         </div>
     </div>
-    <button class="right-btn">
-        <img src="src/assets/buttons/rightButton.svg" alt="좌측 화살표" class="right-arrow" />
-    </button>
 </div>
 
 <script type="module" src="index.js"></script>

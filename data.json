@@ -66,7 +66,7 @@
       "tabData": [
         {
           "mediaName": "경향신문",
-          "sourceLogo": "src/assets/news/logo/kyunghyang.svg",
+          "sourceLogo": "src/assets/logos/kyunghyang.svg",
           "newsDate": "2023.02.10. 12:34",
           "mainNews": {
             "thumbnailImage": "https://img.khan.co.kr/news/2024/07/06/rcv.YNA.20240705.PYH2024070501770001300_P1.webp",
@@ -84,7 +84,7 @@
         },
         {
           "mediaName": "YTN",
-          "sourceLogo": "src/assets/news/logo/ytn.svg",
+          "sourceLogo": "src/assets/logos/ytn.svg",
           "newsDate": "2023.02.10. 11:11",
           "mainNews": {
             "thumbnailImage": "https://image.ytn.co.kr/general/jpg/2022/0413/202204131632445371_t.jpg",
@@ -102,7 +102,7 @@
         },
         {
           "mediaName": "SBSBiz",
-          "sourceLogo": "src/assets/news/logo/sbsBiz.svg",
+          "sourceLogo": "src/assets/logos/sbsBiz.svg",
           "newsDate": "2023.02.10. 11:11",
           "mainNews": {
             "thumbnailImage": "https://img.sbs.co.kr/newimg/news/20240706/201954883_1280.jpg",
@@ -126,7 +126,7 @@
       "tabData": [
         {
           "mediaName": "매일경제",
-          "sourceLogo": "src/assets/news/logo/maeil.svg",
+          "sourceLogo": "src/assets/logos/maeil.svg",
           "newsDate": "2023.02.10. 20:27",
           "mainNews": {
             "thumbnailImage": "https://wimg.mk.co.kr/news/cms/202407/06/news-p.v1.20240706.fd08c99031b04720a87b4cc7897f4fc2_P1.jpg",
@@ -144,7 +144,7 @@
         },
         {
           "mediaName": "연합뉴스TV",
-          "sourceLogo": "src/assets/news/logo/yonhap.svg",
+          "sourceLogo": "src/assets/logos/yonhap.svg",
           "newsDate": "2023.02.10. 18:27",
           "mainNews": {
             "thumbnailImage": "https://img0.yna.co.kr/photo/yna/YH/2024/01/04/PYH2024010414600001300_P4.jpg",
@@ -162,7 +162,7 @@
         },
         {
           "mediaName": "세계일보",
-          "sourceLogo": "src/assets/news/logo/segye.svg",
+          "sourceLogo": "src/assets/logos/segye.svg",
           "newsDate": "2023.02.10. 11:11",
           "mainNews": {
             "thumbnailImage": "https://img.segye.com/content/image/2024/07/05/20240705508906.jpg",
@@ -186,7 +186,7 @@
       "tabData": [
         {
           "mediaName": "조선일보",
-          "sourceLogo": "src/assets/news/logo/chosun.svg",
+          "sourceLogo": "src/assets/logos/chosun.svg",
           "newsDate": "2023.12.10. 11:27",
           "mainNews": {
             "thumbnailImage": "https://imgnews.pstatic.net/image/023/2024/07/06/0003844628_001_20240706160012847.jpg?type=w647",
@@ -204,7 +204,7 @@
         },
         {
           "mediaName": "동아일보",
-          "sourceLogo": "src/assets/news/logo/donga.svg",
+          "sourceLogo": "src/assets/logos/donga.svg",
           "newsDate": "2023.03.13. 18:27",
           "mainNews": {
             "thumbnailImage": "https://imgnews.pstatic.net/image/020/2024/07/06/0003574812_001_20240706150510496.jpg",
@@ -228,7 +228,7 @@
       "tabData": [
         {
           "mediaName": "서울신문",
-          "sourceLogo": "src/assets/news/logo/seoul.svg",
+          "sourceLogo": "src/assets/logos/seoul.svg",
           "newsDate": "2023.04.15. 18:27",
           "mainNews": {
             "thumbnailImage": "https://imgnews.pstatic.net/image/081/2024/07/06/0003462874_001_20240706213311195.jpg",
@@ -246,7 +246,7 @@
         },
         {
           "mediaName": "한겨레",
-          "sourceLogo": "src/assets/news/logo/hankyoreh.svg",
+          "sourceLogo": "src/assets/logos/hankyoreh.svg",
           "newsDate": "2024.04.10. 18:27",
           "mainNews": {
             "thumbnailImage": "https://imgnews.pstatic.net/image/028/2024/07/05/0002696883_001_20240706181017816.jpg",
@@ -270,7 +270,7 @@
       "tabData": [
         {
           "mediaName": "문화일보",
-          "sourceLogo": "src/assets/news/logo/munhwa.svg",
+          "sourceLogo": "src/assets/logos/munhwa.svg",
           "newsDate": "2023.09.10. 18:27",
           "mainNews": {
             "thumbnailImage": "https://imgnews.pstatic.net/image/021/2024/07/06/0002647014_001_20240706141911138.jpg",
@@ -288,7 +288,7 @@
         },
         {
           "mediaName": "국민일보",
-          "sourceLogo": "src/assets/news/logo/kookmin.svg",
+          "sourceLogo": "src/assets/logos/kookmin.svg",
           "newsDate": "2024.10.30. 18:27",
           "mainNews": {
             "thumbnailImage": "https://imgnews.pstatic.net/image/005/2024/07/06/2024070605322412876_1720211544_0020279245_20240706064407477.jpg",
@@ -312,7 +312,7 @@
       "tabData": [
         {
           "mediaName": "데일리안",
-          "sourceLogo": "src/assets/news/logo/dailyan.svg",
+          "sourceLogo": "src/assets/logos/dailyan.svg",
           "newsDate": "2022.02.22. 18:27",
           "mainNews": {
             "thumbnailImage": "https://cdnimage.dailian.co.kr/news/202407/news_1720067848_1379800_m_1.jpeg",
@@ -330,7 +330,7 @@
         },
         {
           "mediaName": "아이뉴스",
-          "sourceLogo": "src/assets/news/logo/inews.svg",
+          "sourceLogo": "src/assets/logos/inews.svg",
           "newsDate": "2021.01.11. 11:07",
           "mainNews": {
             "thumbnailImage": "https://image.inews24.com/v1/d78daaadfcbb27.jpg",
@@ -354,7 +354,7 @@
       "tabData": [
         {
           "mediaName": "MBN",
-          "sourceLogo": "src/assets/news/logo/mbn.svg",
+          "sourceLogo": "src/assets/logos/mbn.svg",
           "newsDate": "2026.06.16. 18:27",
           "mainNews": {
             "thumbnailImage": "https://img.mbn.co.kr/filewww/news/2024/07/06/17202538806688fdb82f103.jpg",
@@ -372,7 +372,7 @@
         },
         {
           "mediaName": "아시아경제",
-          "sourceLogo": "src/assets/news/logo/asia.svg",
+          "sourceLogo": "src/assets/logos/asia.svg",
           "newsDate": "2020.02.20. 18:27",
           "mainNews": {
             "thumbnailImage": "https://cphoto.asiae.co.kr/listimglink/1/2024070617161542351_1720253775.jpg",

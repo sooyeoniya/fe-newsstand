@@ -1,4 +1,4 @@
-export function dateUtil() {
+export function formatDate() {
   const today = new Date();
   const days = ['일', '월', '화', '수', '목', '금', '토'];
 
