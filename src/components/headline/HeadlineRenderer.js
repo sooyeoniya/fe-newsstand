@@ -1,8 +1,8 @@
 import { getTopNews } from "../../apis/NewsAPI.js";
 
-async function renderTopNews(idx, topNewsItemId) {
-  const topNewsItem = document.getElementById(topNewsItemId);
-  const rollingList = topNewsItem.querySelector(".rolling");
+async function renderHeadline(idx, headlineItemId) {
+  const headlineItem = document.getElementById(headlineItemId);
+  const rollingList = headlineItem.querySelector(".rolling");
   const allNews = await getTopNews().then(data => data[idx].newsLists);
 
   rollingList.innerHTML = allNews.map(news => `
@@ -17,4 +17,4 @@ async function renderTopNews(idx, topNewsItemId) {
   return rollingList;
 }
 
-export { renderTopNews };
+export { renderHeadline };

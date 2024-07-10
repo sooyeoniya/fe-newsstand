@@ -1,4 +1,4 @@
-import { renderTopNews } from "./HeadlineRenderer.js";
+import { renderHeadline } from "./HeadlineRenderer.js";
 import startRolling from "./HeadlineRolling.js";
 import "./Headlines.css";
 
@@ -14,7 +14,7 @@ export default function Headline(elementId) {
     </div>
   `;
 
-  renderTopNews(0, "headline-item-1");
-  renderTopNews(1, "headline-item-2");
+  renderHeadline(0, "headline-item-1");
+  renderHeadline(1, "headline-item-2");
   startRolling();
 }
