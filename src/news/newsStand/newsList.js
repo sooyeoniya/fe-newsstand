@@ -128,7 +128,7 @@ async function renderNewsContent() {
             <div class="news-sub-content">
               <ul class="news-headlines">
                 ${newsItem.subNews.map(subNews => `
-                  <li class="headline">
+                  <li class="sub-news-headline">
                     <a href="${subNews.url}" target="_blank" rel="noopener noreferrer">${subNews.newsTitle}</a>
                   </li>
                 `).join('')}

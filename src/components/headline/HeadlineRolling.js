@@ -1,8 +1,8 @@
 import { renderTopNews } from "./HeadlineRenderer.js";
 
-async function startRolling() {
-  const rollingList1 = await renderTopNews(0, 'top-news-item-1');
-  const rollingList2 = await renderTopNews(1, 'top-news-item-2');
+export default async function startRolling() {
+  const rollingList1 = await renderTopNews(0, "headline-item-1");
+  const rollingList2 = await renderTopNews(1, "headline-item-2");
 
   function roll(list) {
     const itemHeight = list.children[0].offsetHeight;
@@ -37,5 +37,3 @@ async function startRolling() {
   roll(rollingList1);
   setTimeout(() => {roll(rollingList2)}, 1000);
 }
-
-startRolling();

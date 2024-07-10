@@ -1,9 +1,8 @@
 import { getTopNews } from "../../apis/NewsAPI.js";
-import "./Headlines.css";
 
 async function renderTopNews(idx, topNewsItemId) {
   const topNewsItem = document.getElementById(topNewsItemId);
-  const rollingList = topNewsItem.querySelector('.rolling');
+  const rollingList = topNewsItem.querySelector(".rolling");
   const allNews = await getTopNews().then(data => data[idx].newsLists);
 
   rollingList.innerHTML = allNews.map(news => `

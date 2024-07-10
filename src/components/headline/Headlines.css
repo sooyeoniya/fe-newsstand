@@ -1,11 +1,11 @@
 
-.top-news {
+.headline {
     display: flex;
     padding: 10px 0;
     gap: 10px;
 }
 
-.top-news-item {
+.headline-item {
     font-size: var(--font-size-medium);
     border: 1px solid var(--color-border);
     background-color: var(--color-background);

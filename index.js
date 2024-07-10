@@ -1,8 +1,8 @@
-import "@/utils/dateUtils.js";
-import "@/components/headlines/HeadlineRolling.js";
 import "@/news/topMenu/mediaButtonControl.js";
 import "@/news/newsStand/newsStand.js";
 
 import Header from "@/components/header/Header.js";
+import Headline from "./src/components/headline/Headline.js";
 
-document.getElementById("header").appendChild(Header());
+Header("header");
+Headline("headline");
