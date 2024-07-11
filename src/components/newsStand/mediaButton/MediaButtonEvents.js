@@ -20,4 +20,4 @@ function mediaButtonEvents() {
   });
 }
 
-mediaButtonEvents();
+export { mediaButtonEvents };
