@@ -1,10 +1,8 @@
-import { initSubscriptionStatus } from "../../subscription/SubscriptionManager.js";
+import { initSubscriptionStatus } from "../subscription/SubscriptionController.js";
 import NewsList from "./NewsList.js";
 
 async function initNewsListRenderer() {
-  if (!localStorage.getItem('subscriptionStatus')) {
-    await initSubscriptionStatus();
-  }
+  await initSubscriptionStatus();
   await NewsList();
 }
 

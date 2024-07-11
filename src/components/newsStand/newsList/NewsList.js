@@ -1,5 +1,5 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
-import { handleSubscribeButtonClick } from "../../subscription/SubscribeButton.js";
+import { handleSubscribeStatus } from "../subscription/SubscriptionController.js";
 
 export default async function NewsList() {
   const newsContainer = document.querySelector('.news-container');
@@ -58,7 +58,7 @@ export default async function NewsList() {
     `;
 
     const subscribeButton = newsContainer.querySelector('.subscribe-button');
-    subscribeButton.addEventListener('click', handleSubscribeButtonClick);
+    subscribeButton.addEventListener('click', handleSubscribeStatus);
   } catch (error) {
     console.error(error);
   }
