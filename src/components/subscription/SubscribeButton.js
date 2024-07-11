@@ -1,7 +1,7 @@
 import ToastMessage from "../alerts/ToastMessage.js";
 import Notification from "../alerts/Notification.js";
+import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
 
-// TODO: 해체할당과 이름바꾸기 방법으로 수정
 async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;
   const mediaName = subscribeButton.dataset.mediaName;
@@ -20,6 +20,7 @@ async function handleSubscribeButtonClick(event) {
   }
 
   localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
+  await SubscribedNewsList();
 }
 
 export { handleSubscribeButtonClick };

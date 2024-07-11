@@ -1,5 +1,5 @@
 import { initNewsListRenderer } from "../newsList/NewsListManager.js";
-import { updateTabContent, removeTabContent } from "./NewsTabManager.js";
+import { updateTabContent, removeTabContent } from "./NewsTabContents.js";
 
 function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
   const progressBar = tab.querySelector(".progress-bar");

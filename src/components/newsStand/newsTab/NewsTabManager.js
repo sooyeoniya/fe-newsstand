@@ -1,6 +1,7 @@
 import { animateProgressBar } from "./NewsTabAnimation.js";
 import { initNewsListRenderer } from "../newsList/NewsListManager.js";
 import { addArrowButtonClickListener } from "../../button/ButtonEvents.js";
+import { removeTabContent, updateTabContent } from "./NewsTabContents.js";
 import NewsTab from "./NewsTab.js";
 
 function initTabs(tabsContainer, newsTabs, tabState) {
@@ -25,26 +26,7 @@ function updateActiveTab(tabsContainer, newsTabs, tabState) {
   initNewsListRenderer();
 }
 
-function updateTabContent(tab, newsTabs, tabState) {
-  const tabData = newsTabs[tabState.activeTabIndex];
-  const pageInfo = tab.querySelector(".page-info");
-  if (pageInfo) {
-    pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
-  } else {
-    tab.insertAdjacentHTML("beforeend", `
-      <span class="page-info">${tabState.pageCount}/${tabData.tabData.length}</span>
-      <span class="progress-bar"></span>
-    `);
-  }
-}
-
-function removeTabContent(tab) {
-  const pageInfo = tab.querySelector(".page-info");
-  const progressBar = tab.querySelector(".progress-bar");
-  if (pageInfo) pageInfo.remove();
-  if (progressBar) progressBar.remove();
-}
-
+// 탭 클릭 이벤트 리스너
 function addTabClickListener(tabsContainer, newsTabs, tabState) {
   tabsContainer.addEventListener('click', (event) => {
     const clickedTab = event.target.closest('.tab');
@@ -73,4 +55,4 @@ async function initTabManager(tabsContainer, newsTabs) {
   addArrowButtonClickListener(tabsContainer, newsTabs, tabState);
 }
 
-export { initTabManager, updateActiveTab, updateTabContent, removeTabContent };
+export { initTabManager, updateActiveTab };
