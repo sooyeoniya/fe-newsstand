@@ -1,7 +1,7 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { handleSubscribeButtonClick } from "../../subscription/SubscribeButton.js";
 
-async function NewsList() {
+export default async function NewsList() {
   const newsContainer = document.querySelector('.news-container');
   const activeTab = document.querySelector('.news-tabs .tab.active');
   if (!activeTab) return;
@@ -63,5 +63,3 @@ async function NewsList() {
     console.error(error);
   }
 }
-
-export { NewsList };
