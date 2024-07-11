@@ -1,6 +1,6 @@
 import "./Alerts.css";
 
-function renderNotification(mediaName) {
+export default function Notification(mediaName) {
   return new Promise((resolve) => {
     const container = document.querySelector('.container');
     const confirmation = document.createElement('div');
@@ -28,5 +28,3 @@ function renderNotification(mediaName) {
     });
   });
 }
-
-export { renderNotification };
