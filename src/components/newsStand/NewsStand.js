@@ -1,6 +1,6 @@
 import { getTabsNews } from "../../apis/NewsAPI.js";
 import { initNewsListRenderer } from "./newsList/NewsListManager.js";
-import { initTabManager } from "./newsTab/NewsTab.js";
+import { initTabManager } from "./newsTab/NewsTabManager.js";
 
 async function initNewsTabs() {
   const tabsContainer = document.querySelector(".news-tabs");

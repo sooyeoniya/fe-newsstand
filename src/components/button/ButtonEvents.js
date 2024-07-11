@@ -1,4 +1,4 @@
-import { updateActiveTab } from '../newsStand/newsTab/NewsTab.js';
+import { updateActiveTab } from '../newsStand/newsTab/NewsTabManager.js';
 
 function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
   const container = document.querySelector('.container');
