@@ -1,6 +1,6 @@
 import { getTopNews } from "../../apis/NewsAPI.js";
 
-async function renderHeadline(idx, headlineItemId) {
+export default async function renderHeadline(idx, headlineItemId) {
   const headlineItem = document.getElementById(headlineItemId);
   const rollingList = headlineItem.querySelector(".rolling");
   const allNews = await getTopNews().then(data => data[idx].newsLists);
@@ -16,5 +16,3 @@ async function renderHeadline(idx, headlineItemId) {
 
   return rollingList;
 }
-
-export { renderHeadline };

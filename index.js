@@ -1,12 +1,11 @@
-import "@/components/newsStand/mediaButton/MediaButtonControl.js";
-import "@/components/newsStand/NewsStand.js";
-
 import Header from "@/components/header/Header.js";
 import Headline from "@/components/headline/Headline.js";
 import Button from "@/components/button/Button.js";
+import NewsStand from "@/components/newsStand/NewsStand.js";
 
 Header("header");
 Headline("headline");
+NewsStand("newsstand");
 
 document.querySelector(".container").prepend(Button(
   "left-btn",

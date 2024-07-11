@@ -1,4 +1,4 @@
-import { renderHeadline } from "./HeadlineRenderer.js";
+import renderHeadline from "./HeadlineRenderer.js";
 import startRolling from "./HeadlineRolling.js";
 import "./Headlines.css";
 

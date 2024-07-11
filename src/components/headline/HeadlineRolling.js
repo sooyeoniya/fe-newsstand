@@ -1,4 +1,4 @@
-import { renderHeadline } from "./HeadlineRenderer.js";
+import renderHeadline from "./HeadlineRenderer.js";
 
 export default async function startRolling() {
   const rollingList1 = await renderHeadline(0, "headline-item-1");

@@ -1,8 +1,7 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
-import { initializeSubscriptionStatus } from "../../subscription/SubscriptionManager.js";
 import { handleSubscribeButtonClick } from "../../subscription/SubscribeButton.js";
 
-async function renderNewsContent() {
+export default async function NewsList() {
   const newsContainer = document.querySelector('.news-container');
   const activeTab = document.querySelector('.news-tabs .tab.active');
   if (!activeTab) return;
@@ -64,12 +63,3 @@ async function renderNewsContent() {
     console.error(error);
   }
 }
-
-async function initNewsContentRenderer() {
-  if (!localStorage.getItem('subscriptionStatus')) {
-    await initializeSubscriptionStatus();
-  }
-  renderNewsContent();
-}
-
-export { initNewsContentRenderer };

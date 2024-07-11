@@ -1,6 +1,6 @@
 import "./Alerts.css";
 
-function renderToast(message) {
+export default function ToastMessage(message) {
   const container = document.querySelector(".container");
   const toast = document.createElement("div");
   toast.className = "toast";
@@ -18,5 +18,3 @@ function renderToast(message) {
     }, { once: true });
   }, 5000);
 }
-
-export { renderToast };
