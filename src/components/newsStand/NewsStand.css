@@ -8,12 +8,12 @@
     padding: 20px 0;
 }
 
-.news-container {
+.total-news-container, .my-news-container {
     height: 332px;
     border: 1px solid var(--color-border);
 }
 
-.news-tabs {
+.total-news-tabs, .my-news-tabs {
     display: flex;
     background-color: var(--color-background);
     border: 1px solid var(--color-border);

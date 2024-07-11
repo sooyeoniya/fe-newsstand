@@ -1,9 +1,9 @@
 import { initSubscriptionStatus } from "../subscription/SubscriptionController.js";
-import NewsList from "./NewsList.js";
+import NewsListView from "./NewsListView.js";
 
 async function initNewsListRenderer() {
   await initSubscriptionStatus();
-  await NewsList();
+  await NewsListView;
 }
 
 export { initNewsListRenderer };
