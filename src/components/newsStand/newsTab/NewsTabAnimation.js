@@ -37,11 +37,11 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
 
           tabs.forEach((tab, index) => {
             if (index === nextTabIndex) {
-              tab.classList.add('active');
+              tab.classList.add("active");
               updateTabContent(tab, newsTabs, tabState);
               animateProgressBar(tab, tabsContainer, newsTabs, tabState);
             } else {
-              tab.classList.remove('active');
+              tab.classList.remove("active");
               removeTabContent(tab);
             }
           });
@@ -55,7 +55,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
     animationId = requestAnimationFrame(animate);
     tab.dataset.animationId = animationId.toString();
 
-    tabsContainer.addEventListener('click', (event) => {
+    tabsContainer.addEventListener("click", (event) => {
       if (animationId || (animationId && !event.target.closest('.tab'))) {
         cancelAnimationFrame(animationId);
         delete tab.dataset.animationId;

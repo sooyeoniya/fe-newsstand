@@ -4,13 +4,6 @@ import { addArrowButtonClickListener } from "../../button/ButtonEvents.js";
 import { removeTabContent, updateTabContent } from "./NewsTabContents.js";
 import NewsTab from "./NewsTab.js";
 
-function initTabs(tabsContainer, newsTabs, tabState) {
-  newsTabs.forEach((tabData, index) => {
-    const tabButton = NewsTab(tabData, index, tabState);
-    tabsContainer.appendChild(tabButton);
-  });
-}
-
 function updateActiveTab(tabsContainer, newsTabs, tabState) {
   const tabs = tabsContainer.querySelectorAll('.tab');
   tabs.forEach((tab, index) => {
@@ -26,7 +19,6 @@ function updateActiveTab(tabsContainer, newsTabs, tabState) {
   initNewsListRenderer();
 }
 
-// 탭 클릭 이벤트 리스너
 function addTabClickListener(tabsContainer, newsTabs, tabState) {
   tabsContainer.addEventListener('click', (event) => {
     const clickedTab = event.target.closest('.tab');
@@ -40,6 +32,13 @@ function addTabClickListener(tabsContainer, newsTabs, tabState) {
         updateActiveTab(tabsContainer, newsTabs, tabState);
       }
     });
+  });
+}
+
+function initTabs(tabsContainer, newsTabs, tabState) {
+  newsTabs.forEach((tabData, index) => {
+    const tabButton = NewsTab(tabData, index, tabState);
+    tabsContainer.appendChild(tabButton);
   });
 }
 

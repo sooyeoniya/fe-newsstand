@@ -1,8 +1,10 @@
+import { setCurrentView } from "../../state/StateManager.js";
+
 function toggleMediaView(totalButton, myButton, totalView, myView) {
-  totalButton.classList.toggle('active');
-  myButton.classList.toggle('active');
-  totalView.classList.toggle('active');
-  myView.classList.toggle('active');
+  totalButton.classList.toggle("active");
+  myButton.classList.toggle("active");
+  totalView.classList.toggle("active");
+  myView.classList.toggle("active");
 }
 
 function mediaButtonEvents() {
@@ -11,12 +13,14 @@ function mediaButtonEvents() {
   const mediaTotalView = document.querySelector('.media-total-view');
   const mediaMyView = document.querySelector('.media-my-view');
 
-  mediaTotalButton.addEventListener('click', () => {
+  mediaTotalButton.addEventListener("click", () => {
     toggleMediaView(mediaTotalButton, mediaMyButton, mediaTotalView, mediaMyView);
+    setCurrentView("total");
   });
 
-  mediaMyButton.addEventListener('click', () => {
+  mediaMyButton.addEventListener("click", () => {
     toggleMediaView(mediaMyButton, mediaTotalButton, mediaMyView, mediaTotalView);
+    setCurrentView("subscribed");
   });
 }
 
