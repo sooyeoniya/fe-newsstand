@@ -3,6 +3,7 @@ import { initNewsListRenderer } from "./newsList/NewsListManager.js";
 import { initTabManager } from "./newsTab/NewsTabManager.js";
 import { setTabsContainer } from "../state/StateManager.js";
 
+// 전체 뉴스 스탠드
 async function initNewsTabs() {
   const tabsContainer = document.querySelector(".news-tabs");
   setTabsContainer(tabsContainer);

@@ -2,6 +2,7 @@ import { initSubscriptionStatus } from "../../subscription/SubscriptionManager.j
 import TotalNewsList from "./TotalNewsList.js";
 import SubscribedNewsList from "./SubscribedNewsList.js";
 
+// 뉴스 리스트
 async function initNewsListRenderer() {
   if (!localStorage.getItem("subscriptionStatus")) {
     await initSubscriptionStatus();

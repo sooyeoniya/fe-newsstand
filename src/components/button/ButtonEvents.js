@@ -1,4 +1,4 @@
-import { updateActiveTab } from "../newsStand/newsTab/NewsTabManager.js";
+import { updateActiveTab } from "../newsStand/newsTab/NewsTabControll.js";
 import {
   getSubCurrentPage,
   getCurrentView,

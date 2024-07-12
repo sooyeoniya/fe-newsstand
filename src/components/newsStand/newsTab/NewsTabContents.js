@@ -1,5 +1,6 @@
 import { getTotalActiveTabIndex, getTotalPageCount } from "../../state/StateManager.js";
 
+// 활성화 탭 UI
 function updateTabContent(tab, newsTabs) {
   const activeTabIndex = getTotalActiveTabIndex();
   const tabData = newsTabs[activeTabIndex];
@@ -15,6 +16,7 @@ function updateTabContent(tab, newsTabs) {
   }
 }
 
+// 비활성화 탭 UI
 function removeTabContent(tab) {
   const pageInfo = tab.querySelector(".page-info");
   const progressBar = tab.querySelector(".progress-bar");
