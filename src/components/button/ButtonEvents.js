@@ -1,13 +1,13 @@
 import { updateActiveTab } from "../newsStand/newsTab/NewsTabManager.js";
 import {
-  getCurrentPage,
+  getSubCurrentPage,
   getCurrentView,
-  getTotalPages,
-  setCurrentPage,
-  getActiveTabIndex,
-  getPageCount,
-  setPageCount,
-  setActiveTabIndex
+  getSubTotalPages,
+  setSubCurrentPage,
+  getTotalActiveTabIndex,
+  getTotalPageCount,
+  setTotalPageCount,
+  setTotalActiveTabIndex
 } from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
 
@@ -22,7 +22,7 @@ function addArrowButtonClickListener(tabsContainer, newsTabs) {
       const currentView = getCurrentView();
       if (currentView === "total") {
         const tabs = tabsContainer.querySelectorAll(".tab");
-        const activeTabIndex = getActiveTabIndex();
+        const activeTabIndex = getTotalActiveTabIndex();
         const activeTab = tabs[activeTabIndex];
 
         const animationId = parseInt(activeTab.dataset.animationId);
@@ -32,24 +32,24 @@ function addArrowButtonClickListener(tabsContainer, newsTabs) {
         }
 
         if (isLeftButton) {
-          setPageCount(getPageCount() - 1);
-          if (getPageCount() < 1) {
+          setTotalPageCount(getTotalPageCount() - 1);
+          if (getTotalPageCount() < 1) {
             const prevTabIndex = (activeTabIndex - 1 + tabs.length) % tabs.length;
-            setActiveTabIndex(prevTabIndex);
-            setPageCount(newsTabs[prevTabIndex].tabData.length);
+            setTotalActiveTabIndex(prevTabIndex);
+            setTotalPageCount(newsTabs[prevTabIndex].tabData.length);
           }
         } else if (isRightButton) {
           const tabData = newsTabs[activeTabIndex];
-          setPageCount(getPageCount() + 1);
-          if (getPageCount() > tabData.tabData.length) {
-            setActiveTabIndex((activeTabIndex + 1) % tabs.length);
-            setPageCount(1);
+          setTotalPageCount(getTotalPageCount() + 1);
+          if (getTotalPageCount() > tabData.tabData.length) {
+            setTotalActiveTabIndex((activeTabIndex + 1) % tabs.length);
+            setTotalPageCount(1);
           }
         }
         updateActiveTab(tabsContainer, newsTabs);
       } else if (currentView === "subscribed") {
-        let currentPage = getCurrentPage();
-        const totalPages = getTotalPages();
+        let currentPage = getSubCurrentPage();
+        const totalPages = getSubTotalPages();
 
         if (isLeftButton) {
           currentPage--;
@@ -63,7 +63,7 @@ function addArrowButtonClickListener(tabsContainer, newsTabs) {
           }
         }
 
-        setCurrentPage(currentPage);
+        setSubCurrentPage(currentPage);
         await SubscribedNewsList();
       }
     }

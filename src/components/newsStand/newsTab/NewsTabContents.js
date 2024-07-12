@@ -1,9 +1,9 @@
-import { getActiveTabIndex, getPageCount } from "../../state/StateManager.js";
+import { getTotalActiveTabIndex, getTotalPageCount } from "../../state/StateManager.js";
 
 function updateTabContent(tab, newsTabs) {
-  const activeTabIndex = getActiveTabIndex();
+  const activeTabIndex = getTotalActiveTabIndex();
   const tabData = newsTabs[activeTabIndex];
-  const pageCount = getPageCount();
+  const pageCount = getTotalPageCount();
   const pageInfo = tab.querySelector(".page-info");
   if (pageInfo) {
     pageInfo.textContent = `${pageCount}/${tabData.tabData.length}`;

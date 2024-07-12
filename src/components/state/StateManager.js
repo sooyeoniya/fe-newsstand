@@ -1,12 +1,12 @@
 let currentView = "total";
 
 // subscribed
-let currentPage = 1;
-let totalPages = 1;
+let subCurrentPage = 1;
+let subTotalPages = 1;
 
 // total
-let activeTabIndex = 0;
-let pageCount = 1;
+let totalActiveTabIndex = 0;
+let totalPageCount = 1;
 
 export function getCurrentView() {
   return currentView;
@@ -16,34 +16,34 @@ export function setCurrentView(view) {
   currentView = view;
 }
 
-export function getCurrentPage() {
-  return currentPage;
+export function getSubCurrentPage() {
+  return subCurrentPage;
 }
 
-export function setCurrentPage(page) {
-  currentPage = page;
+export function setSubCurrentPage(page) {
+  subCurrentPage = page;
 }
 
-export function getTotalPages() {
-  return totalPages;
+export function getSubTotalPages() {
+  return subTotalPages;
 }
 
-export function setTotalPages(total) {
-  totalPages = total;
+export function setSubTotalPages(total) {
+  subTotalPages = total;
 }
 
-export function getActiveTabIndex() {
-  return activeTabIndex;
+export function getTotalActiveTabIndex() {
+  return totalActiveTabIndex;
 }
 
-export function setActiveTabIndex(index) {
-  activeTabIndex = index;
+export function setTotalActiveTabIndex(index) {
+  totalActiveTabIndex = index;
 }
 
-export function getPageCount() {
-  return pageCount;
+export function getTotalPageCount() {
+  return totalPageCount;
 }
 
-export function setPageCount(count) {
-  pageCount = count;
+export function setTotalPageCount(count) {
+  totalPageCount = count;
 }

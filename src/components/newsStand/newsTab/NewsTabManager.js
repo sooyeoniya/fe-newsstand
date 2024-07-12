@@ -2,13 +2,13 @@ import { animateProgressBar } from "./NewsTabAnimation.js";
 import { initNewsListRenderer } from "../newsList/NewsListManager.js";
 import { addArrowButtonClickListener } from "../../button/ButtonEvents.js";
 import { removeTabContent, updateTabContent } from "./NewsTabContents.js";
-import { getActiveTabIndex, setActiveTabIndex, setPageCount } from "../../state/StateManager.js";
+import { getTotalActiveTabIndex, setTotalActiveTabIndex, setTotalPageCount } from "../../state/StateManager.js";
 import NewsTab from "./NewsTab.js";
 
 // 활성화 탭 변경(활성화 시 탭 내부 구조 변경 및 프로그래스바 진행 추가를 위함)
 function updateActiveTab(tabsContainer, newsTabs) {
   const tabs = tabsContainer.querySelectorAll(".tab");
-  const activeTabIndex = getActiveTabIndex();
+  const activeTabIndex = getTotalActiveTabIndex();
   tabs.forEach((tab, index) => {
     if (index === activeTabIndex) {
       tab.classList.add("active");
@@ -31,8 +31,8 @@ function addTabClickListener(tabsContainer, newsTabs) {
     const tabs = tabsContainer.querySelectorAll(".tab");
     tabs.forEach((tab, index) => {
       if (tab === clickedTab) {
-        setActiveTabIndex(index);
-        setPageCount(1);
+        setTotalActiveTabIndex(index);
+        setTotalPageCount(1);
         updateActiveTab(tabsContainer, newsTabs);
       }
     });
@@ -49,8 +49,8 @@ function initTabs(tabsContainer, newsTabs) {
 
 // 전체 탭 초기화 함수
 async function initTabManager(tabsContainer, newsTabs) {
-  setPageCount(1);
-  setActiveTabIndex(0);
+  setTotalPageCount(1);
+  setTotalActiveTabIndex(0);
 
   initTabs(tabsContainer, newsTabs);
   addTabClickListener(tabsContainer, newsTabs);

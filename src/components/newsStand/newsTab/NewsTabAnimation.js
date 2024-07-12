@@ -1,6 +1,6 @@
 import { initNewsListRenderer } from "../newsList/NewsListManager.js";
 import { updateTabContent, removeTabContent } from "./NewsTabContents.js";
-import { getActiveTabIndex, setActiveTabIndex, getPageCount, setPageCount } from "../../state/StateManager.js";
+import { getTotalActiveTabIndex, setTotalActiveTabIndex, getTotalPageCount, setTotalPageCount } from "../../state/StateManager.js";
 
 function animateProgressBar(tab, tabsContainer, newsTabs) {
   const progressBar = tab.querySelector(".progress-bar");
@@ -23,18 +23,18 @@ function animateProgressBar(tab, tabsContainer, newsTabs) {
         tab.dataset.animationId = animationId.toString();
       } else {
         const tabs = tabsContainer.querySelectorAll(".tab");
-        const activeTabIndex = getActiveTabIndex();
+        const activeTabIndex = getTotalActiveTabIndex();
         const nextTabIndex = (activeTabIndex + 1) % tabs.length;
 
-        setPageCount(getPageCount() + 1);
+        setTotalPageCount(getTotalPageCount() + 1);
 
         const pageInfo = tab.querySelector(".page-info");
         const tabData = newsTabs[activeTabIndex];
-        if (pageInfo && tabData) pageInfo.textContent = `${getPageCount()}/${tabData.tabData.length}`;
+        if (pageInfo && tabData) pageInfo.textContent = `${getTotalPageCount()}/${tabData.tabData.length}`;
 
-        if (getPageCount() > tabData.tabData.length) {
-          setActiveTabIndex(nextTabIndex);
-          setPageCount(1);
+        if (getTotalPageCount() > tabData.tabData.length) {
+          setTotalActiveTabIndex(nextTabIndex);
+          setTotalPageCount(1);
 
           tabs.forEach((tab, index) => {
             if (index === nextTabIndex) {

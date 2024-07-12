@@ -1,5 +1,5 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
-import { setTotalPages, getCurrentPage } from "../../state/StateManager.js";
+import { setSubTotalPages, getSubCurrentPage } from "../../state/StateManager.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
 
 export default async function SubscribedNewsList() {
@@ -26,8 +26,8 @@ export default async function SubscribedNewsList() {
       return;
     }
 
-    setTotalPages(filteredNewsItems.length);
-    const currentPage = getCurrentPage() || 1;
+    setSubTotalPages(filteredNewsItems.length);
+    const currentPage = getSubCurrentPage() || 1;
     const newsItem = filteredNewsItems[currentPage - 1];
 
     renderNewsItem(newsContainer, newsItem, subscriptionStatus);
