@@ -21,13 +21,13 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
         animationId = requestAnimationFrame(animate);
         tab.dataset.animationId = animationId.toString();
       } else {
-        const tabs = tabsContainer.querySelectorAll('.tab');
+        const tabs = tabsContainer.querySelectorAll(".tab");
         const activeTabIndex = tabState.activeTabIndex;
         const nextTabIndex = (activeTabIndex + 1) % tabs.length;
 
         tabState.pageCount++;
 
-        const pageInfo = tab.querySelector('.page-info');
+        const pageInfo = tab.querySelector(".page-info");
         const tabData = newsTabs[activeTabIndex];
         if (pageInfo && tabData) pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
 
@@ -56,7 +56,7 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
     tab.dataset.animationId = animationId.toString();
 
     tabsContainer.addEventListener("click", (event) => {
-      if (animationId || (animationId && !event.target.closest('.tab'))) {
+      if (animationId || (animationId && !event.target.closest(".tab"))) {
         cancelAnimationFrame(animationId);
         delete tab.dataset.animationId;
       }

@@ -8,10 +8,10 @@ function toggleMediaView(totalButton, myButton, totalView, myView) {
 }
 
 function mediaButtonEvents() {
-  const mediaTotalButton = document.querySelector('.media-total');
-  const mediaMyButton = document.querySelector('.media-my');
-  const mediaTotalView = document.querySelector('.media-total-view');
-  const mediaMyView = document.querySelector('.media-my-view');
+  const mediaTotalButton = document.querySelector(".media-total");
+  const mediaMyButton = document.querySelector(".media-my");
+  const mediaTotalView = document.querySelector(".media-total-view");
+  const mediaMyView = document.querySelector(".media-my-view");
 
   mediaTotalButton.addEventListener("click", () => {
     toggleMediaView(mediaTotalButton, mediaMyButton, mediaTotalView, mediaMyView);

@@ -5,14 +5,14 @@ import { removeTabContent, updateTabContent } from "./NewsTabContents.js";
 import NewsTab from "./NewsTab.js";
 
 function updateActiveTab(tabsContainer, newsTabs, tabState) {
-  const tabs = tabsContainer.querySelectorAll('.tab');
+  const tabs = tabsContainer.querySelectorAll(".tab");
   tabs.forEach((tab, index) => {
     if (index === tabState.activeTabIndex) {
-      tab.classList.add('active');
+      tab.classList.add("active");
       updateTabContent(tab, newsTabs, tabState);
       animateProgressBar(tab, tabsContainer, newsTabs, tabState);
     } else {
-      tab.classList.remove('active');
+      tab.classList.remove("active");
       removeTabContent(tab);
     }
   });
@@ -20,11 +20,11 @@ function updateActiveTab(tabsContainer, newsTabs, tabState) {
 }
 
 function addTabClickListener(tabsContainer, newsTabs, tabState) {
-  tabsContainer.addEventListener('click', (event) => {
-    const clickedTab = event.target.closest('.tab');
+  tabsContainer.addEventListener("click", (event) => {
+    const clickedTab = event.target.closest(".tab");
     if (!clickedTab) return;
 
-    const tabs = tabsContainer.querySelectorAll('.tab');
+    const tabs = tabsContainer.querySelectorAll(".tab");
     tabs.forEach((tab, index) => {
       if (tab === clickedTab) {
         tabState.activeTabIndex = index;

@@ -4,7 +4,7 @@ import SubscribedNewsList from "./SubscribedNewsList.js";
 import { getCurrentView } from "../../state/StateManager.js";
 
 async function initNewsListRenderer() {
-  if (!localStorage.getItem('subscriptionStatus')) {
+  if (!localStorage.getItem("subscriptionStatus")) {
     await initSubscriptionStatus();
   }
 
@@ -12,9 +12,9 @@ async function initNewsListRenderer() {
   await SubscribedNewsList();
 
   // const currentView = getCurrentView();
-  // if (currentView === 'total') {
+  // if (currentView === "total") {
   //   await TotalNewsList();
-  // } else if (currentView === 'subscribed') {
+  // } else if (currentView === "subscribed") {
   //   await SubscribedNewsList();
   // }
 }

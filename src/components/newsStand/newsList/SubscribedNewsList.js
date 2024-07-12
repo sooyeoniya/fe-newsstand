@@ -3,11 +3,11 @@ import { setTotalPages, getCurrentPage } from "../../state/StateManager.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
 
 export default async function SubscribedNewsList() {
-  const newsContainer = document.querySelector('.media-my-view .news-container');
-  const subscriptionStatus = JSON.parse(localStorage.getItem('subscriptionStatus')) || {};
+  const newsContainer = document.querySelector(".media-my-view .news-container");
+  const subscriptionStatus = JSON.parse(localStorage.getItem("subscriptionStatus")) || {};
 
   const subscribedMediaNames = Object.keys(subscriptionStatus).filter(
-    mediaName => subscriptionStatus[mediaName] === 'Y'
+    mediaName => subscriptionStatus[mediaName] === "Y"
   );
 
   if (subscribedMediaNames.length === 0) {

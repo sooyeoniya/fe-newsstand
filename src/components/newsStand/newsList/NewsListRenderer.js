@@ -8,7 +8,7 @@ export function renderNewsItem(newsContainer, newsItem, subscriptionStatus) {
           <img src="${newsItem.sourceLogo}" alt="${newsItem.mediaName} logo" class="news-source" />
           <span class="news-date">${newsItem.newsDate} 편집</span>
           <button class="subscribe-button" data-media-name="${newsItem.mediaName}">
-            ${subscriptionStatus[newsItem.mediaName] === 'Y' ? 'x' : '+ 구독하기'}
+            ${subscriptionStatus[newsItem.mediaName] === "Y" ? "x" : "+ 구독하기"}
           </button>
         </div>
         <div class="news-main-content">

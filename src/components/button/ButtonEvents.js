@@ -1,18 +1,18 @@
-import { updateActiveTab } from '../newsStand/newsTab/NewsTabManager.js';
+import { updateActiveTab } from "../newsStand/newsTab/NewsTabManager.js";
 import { getCurrentPage, getCurrentView, getTotalPages, setCurrentPage } from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
 
 function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
-  const container = document.querySelector('.container');
+  const container = document.querySelector(".container");
 
-  container.addEventListener('click', async (event) => {
-    const isLeftButton = event.target.closest('.left-btn');
-    const isRightButton = event.target.closest('.right-btn');
+  container.addEventListener("click", async (event) => {
+    const isLeftButton = event.target.closest(".left-btn");
+    const isRightButton = event.target.closest(".right-btn");
 
     if (isLeftButton || isRightButton) {
       const currentView = getCurrentView();
       if (currentView === "total") {
-        const tabs = tabsContainer.querySelectorAll('.tab');
+        const tabs = tabsContainer.querySelectorAll(".tab");
         const activeTabIndex = tabState.activeTabIndex;
         const activeTab = tabs[activeTabIndex];
 

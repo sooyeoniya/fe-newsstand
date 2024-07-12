@@ -6,10 +6,10 @@ async function initSubscriptionStatus() {
     const newsTabs = await getTabsNews();
     newsTabs.forEach(tab => {
       tab.tabData.forEach(newsItem => {
-        subscriptionStatus[newsItem.mediaName] = 'N';
+        subscriptionStatus[newsItem.mediaName] = "N";
       });
     });
-    localStorage.setItem('subscriptionStatus', JSON.stringify(subscriptionStatus));
+    localStorage.setItem("subscriptionStatus", JSON.stringify(subscriptionStatus));
   } catch (error) {
     console.error(error);
   }
