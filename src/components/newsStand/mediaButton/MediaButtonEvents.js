@@ -1,5 +1,6 @@
 import { setCurrentView } from "../../state/StateManager.js";
 
+// 각 언론사 버튼 클릭 이벤트 리스너
 function toggleView(activeButton, inactiveButton, activeView, inactiveView, viewName) {
   setCurrentView(viewName);
   activeButton.classList.add("active");

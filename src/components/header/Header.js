@@ -1,6 +1,7 @@
 import { formatDate } from "../../utils/DateUtils.js";
 import "./Header.css";
 
+// 헤더 UI
 export default function Header(elementId) {
   const headerElement = document.getElementById(elementId);
 

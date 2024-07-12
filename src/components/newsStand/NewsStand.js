@@ -2,6 +2,7 @@ import "./NewsStand.css";
 import { mediaButtonEvents } from "./mediaButton/MediaButtonEvents.js";
 import { initNewsTabs } from "./NewsStandManager.js";
 
+// 전체 뉴스 스탠드 구조
 export default async function NewsStand(elementId) {
   const newsstandElement = document.getElementById(elementId);
 

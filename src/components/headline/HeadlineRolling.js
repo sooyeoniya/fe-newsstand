@@ -1,5 +1,6 @@
 import renderHeadline from "./HeadlineRenderer.js";
 
+// 롤링 기능
 export default async function startRolling() {
   const rollingList1 = await renderHeadline(0, "headline-item-1");
   const rollingList2 = await renderHeadline(1, "headline-item-2");

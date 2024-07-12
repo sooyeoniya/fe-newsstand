@@ -22,7 +22,6 @@ async function initTabManager(newsTabs) {
   const tabsContainer = getTabsContainer();
   setTotalPageCount(1);
   setTotalActiveTabIndex(0);
-
   initTabs(newsTabs);
   addTabClickListener(newsTabs);
   animateProgressBar(tabsContainer.querySelector(".tab.active"), newsTabs);

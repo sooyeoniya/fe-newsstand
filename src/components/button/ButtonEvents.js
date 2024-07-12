@@ -12,6 +12,7 @@ import {
 } from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
 
+// 좌우 버튼 기능
 function addArrowButtonClickListener(newsTabs) {
   const container = document.querySelector(".container");
 

@@ -2,6 +2,7 @@ import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { setSubTotalPages, getSubCurrentPage } from "../../state/StateManager.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
 
+// 내가 구독한 언론사 리스트
 export default async function SubscribedNewsList() {
   const newsContainer = document.querySelector(".media-my-view .news-container");
   const subscriptionStatus = JSON.parse(localStorage.getItem("subscriptionStatus")) || {};

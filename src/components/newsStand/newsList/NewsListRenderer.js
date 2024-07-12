@@ -1,5 +1,6 @@
 import { handleSubscribeButtonClick } from "../../subscription/SubscribeButtonControll.js";
 
+// 뉴스 리스트 공통 UI
 export function renderNewsItem(newsContainer, newsItem, subscriptionStatus) {
   newsContainer.innerHTML = `
     <div class="news-list">

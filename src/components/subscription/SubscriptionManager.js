@@ -1,5 +1,6 @@
 import {getTabsNews} from "../../apis/NewsAPI.js";
 
+// 내가 구독한 언론사 데이터 초기화
 async function initSubscriptionStatus() {
   const subscriptionStatus = {};
   try {

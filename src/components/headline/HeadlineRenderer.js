@@ -1,5 +1,6 @@
 import { getTopNews } from "../../apis/NewsAPI.js";
 
+// 헤드라인 롤링 UI
 export default async function renderHeadline(idx, headlineItemId) {
   const headlineItem = document.getElementById(headlineItemId);
   const rollingList = headlineItem.querySelector(".rolling");

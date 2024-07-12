@@ -1,5 +1,6 @@
 import { getTotalPageCount } from "../../state/StateManager.js";
 
+// 카테고리 탭 UI
 export default function NewsTab(tabData, index) {
   const tabButton = document.createElement("button");
   tabButton.className = `tab ${index === 0 ? "active" : ""}`;

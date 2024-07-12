@@ -1,6 +1,7 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
 
+// 전체 언론사 리스트
 export default async function TotalNewsList() {
   const newsContainer = document.querySelector(".news-container");
   const activeTab = document.querySelector(".news-tabs .tab.active");
