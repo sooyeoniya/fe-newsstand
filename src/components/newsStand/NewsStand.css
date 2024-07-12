@@ -11,6 +11,10 @@
 .news-container {
     height: 332px;
     border: 1px solid var(--color-border);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .news-tabs {
@@ -143,6 +147,10 @@
     &:hover {
         border: 2px solid var(--color-border);
     }
+}
+
+.no-subscribe {
+    color: var(--color-text-muted);
 }
 
 .news-main-content {

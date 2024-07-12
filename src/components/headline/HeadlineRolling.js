@@ -11,7 +11,7 @@ export default async function startRolling() {
     let rollingInterval;
 
     function moveToNext() {
-      list.style.transition = 'top 0.5s ease';
+      list.style.transition = "top 0.5s ease";
       list.style.top = `-${currentIdx * itemHeight}px`;
       currentIdx = (currentIdx + 1) % totalItems;
     }
@@ -22,11 +22,11 @@ export default async function startRolling() {
       }, 5000);
     }
 
-    list.addEventListener('mouseenter', () => {
+    list.addEventListener("mouseenter", () => {
       clearInterval(rollingInterval);
     });
 
-    list.addEventListener('mouseleave', () => {
+    list.addEventListener("mouseleave", () => {
       startInterval();
     });
 

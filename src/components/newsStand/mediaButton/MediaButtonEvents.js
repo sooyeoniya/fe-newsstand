@@ -1,22 +1,25 @@
-function toggleMediaView(totalButton, myButton, totalView, myView) {
-  totalButton.classList.toggle('active');
-  myButton.classList.toggle('active');
-  totalView.classList.toggle('active');
-  myView.classList.toggle('active');
+import { setCurrentView } from "../../state/StateManager.js";
+
+function toggleView(activeButton, inactiveButton, activeView, inactiveView, viewName) {
+  setCurrentView(viewName);
+  activeButton.classList.add("active");
+  inactiveButton.classList.remove("active");
+  activeView.classList.add("active");
+  inactiveView.classList.remove("active");
 }
 
 function mediaButtonEvents() {
-  const mediaTotalButton = document.querySelector('.media-total');
-  const mediaMyButton = document.querySelector('.media-my');
-  const mediaTotalView = document.querySelector('.media-total-view');
-  const mediaMyView = document.querySelector('.media-my-view');
+  const mediaTotalButton = document.querySelector(".media-total");
+  const mediaMyButton = document.querySelector(".media-my");
+  const mediaTotalView = document.querySelector(".media-total-view");
+  const mediaMyView = document.querySelector(".media-my-view");
 
-  mediaTotalButton.addEventListener('click', () => {
-    toggleMediaView(mediaTotalButton, mediaMyButton, mediaTotalView, mediaMyView);
+  mediaTotalButton.addEventListener("click", () => {
+    toggleView(mediaTotalButton, mediaMyButton, mediaTotalView, mediaMyView, "total");
   });
 
-  mediaMyButton.addEventListener('click', () => {
-    toggleMediaView(mediaMyButton, mediaTotalButton, mediaMyView, mediaTotalView);
+  mediaMyButton.addEventListener("click", () => {
+    toggleView(mediaMyButton, mediaTotalButton, mediaMyView, mediaTotalView, "subscribed");
   });
 }
 

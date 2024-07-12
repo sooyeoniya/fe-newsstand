@@ -12,7 +12,7 @@ export default async function renderHeadline(idx, headlineItemId) {
        <a href="${news.url}" target="_blank" rel="noopener noreferrer">${news.description}</a>
      </span>
    </li>
- `).join('');
+ `).join("");
 
   return rollingList;
 }
