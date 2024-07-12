@@ -1,8 +1,17 @@
 import { updateActiveTab } from "../newsStand/newsTab/NewsTabManager.js";
-import { getCurrentPage, getCurrentView, getTotalPages, setCurrentPage } from "../state/StateManager.js";
+import {
+  getCurrentPage,
+  getCurrentView,
+  getTotalPages,
+  setCurrentPage,
+  getActiveTabIndex,
+  getPageCount,
+  setPageCount,
+  setActiveTabIndex
+} from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
 
-function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
+function addArrowButtonClickListener(tabsContainer, newsTabs) {
   const container = document.querySelector(".container");
 
   container.addEventListener("click", async (event) => {
@@ -13,7 +22,7 @@ function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
       const currentView = getCurrentView();
       if (currentView === "total") {
         const tabs = tabsContainer.querySelectorAll(".tab");
-        const activeTabIndex = tabState.activeTabIndex;
+        const activeTabIndex = getActiveTabIndex();
         const activeTab = tabs[activeTabIndex];
 
         const animationId = parseInt(activeTab.dataset.animationId);
@@ -23,21 +32,21 @@ function addArrowButtonClickListener(tabsContainer, newsTabs, tabState) {
         }
 
         if (isLeftButton) {
-          tabState.pageCount--;
-          if (tabState.pageCount < 1) {
+          setPageCount(getPageCount() - 1);
+          if (getPageCount() < 1) {
             const prevTabIndex = (activeTabIndex - 1 + tabs.length) % tabs.length;
-            tabState.activeTabIndex = prevTabIndex;
-            tabState.pageCount = newsTabs[prevTabIndex].tabData.length;
+            setActiveTabIndex(prevTabIndex);
+            setPageCount(newsTabs[prevTabIndex].tabData.length);
           }
         } else if (isRightButton) {
           const tabData = newsTabs[activeTabIndex];
-          tabState.pageCount++;
-          if (tabState.pageCount > tabData.tabData.length) {
-            tabState.activeTabIndex = (activeTabIndex + 1) % tabs.length;
-            tabState.pageCount = 1;
+          setPageCount(getPageCount() + 1);
+          if (getPageCount() > tabData.tabData.length) {
+            setActiveTabIndex((activeTabIndex + 1) % tabs.length);
+            setPageCount(1);
           }
         }
-        updateActiveTab(tabsContainer, newsTabs, tabState);
+        updateActiveTab(tabsContainer, newsTabs);
       } else if (currentView === "subscribed") {
         let currentPage = getCurrentPage();
         const totalPages = getTotalPages();

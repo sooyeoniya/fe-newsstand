@@ -1,7 +1,8 @@
 import { initNewsListRenderer } from "../newsList/NewsListManager.js";
 import { updateTabContent, removeTabContent } from "./NewsTabContents.js";
+import { getActiveTabIndex, setActiveTabIndex, getPageCount, setPageCount } from "../../state/StateManager.js";
 
-function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
+function animateProgressBar(tab, tabsContainer, newsTabs) {
   const progressBar = tab.querySelector(".progress-bar");
   if (progressBar) {
     progressBar.style.width = "0%";
@@ -22,31 +23,31 @@ function animateProgressBar(tab, tabsContainer, newsTabs, tabState) {
         tab.dataset.animationId = animationId.toString();
       } else {
         const tabs = tabsContainer.querySelectorAll(".tab");
-        const activeTabIndex = tabState.activeTabIndex;
+        const activeTabIndex = getActiveTabIndex();
         const nextTabIndex = (activeTabIndex + 1) % tabs.length;
 
-        tabState.pageCount++;
+        setPageCount(getPageCount() + 1);
 
         const pageInfo = tab.querySelector(".page-info");
         const tabData = newsTabs[activeTabIndex];
-        if (pageInfo && tabData) pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
+        if (pageInfo && tabData) pageInfo.textContent = `${getPageCount()}/${tabData.tabData.length}`;
 
-        if (tabState.pageCount > tabData.tabData.length) {
-          tabState.activeTabIndex = nextTabIndex;
-          tabState.pageCount = 1;
+        if (getPageCount() > tabData.tabData.length) {
+          setActiveTabIndex(nextTabIndex);
+          setPageCount(1);
 
           tabs.forEach((tab, index) => {
             if (index === nextTabIndex) {
               tab.classList.add("active");
-              updateTabContent(tab, newsTabs, tabState);
-              animateProgressBar(tab, tabsContainer, newsTabs, tabState);
+              updateTabContent(tab, newsTabs);
+              animateProgressBar(tab, tabsContainer, newsTabs);
             } else {
               tab.classList.remove("active");
               removeTabContent(tab);
             }
           });
         } else {
-          animateProgressBar(tab, tabsContainer, newsTabs, tabState);
+          animateProgressBar(tab, tabsContainer, newsTabs);
         }
         initNewsListRenderer();
       }

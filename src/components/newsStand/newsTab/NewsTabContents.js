@@ -1,12 +1,15 @@
+import { getActiveTabIndex, getPageCount } from "../../state/StateManager.js";
 
-function updateTabContent(tab, newsTabs, tabState) {
-  const tabData = newsTabs[tabState.activeTabIndex];
+function updateTabContent(tab, newsTabs) {
+  const activeTabIndex = getActiveTabIndex();
+  const tabData = newsTabs[activeTabIndex];
+  const pageCount = getPageCount();
   const pageInfo = tab.querySelector(".page-info");
   if (pageInfo) {
-    pageInfo.textContent = `${tabState.pageCount}/${tabData.tabData.length}`;
+    pageInfo.textContent = `${pageCount}/${tabData.tabData.length}`;
   } else {
     tab.insertAdjacentHTML("beforeend", `
-    <span class="page-info">${tabState.pageCount}/${tabData.tabData.length}</span>
+    <span class="page-info">${pageCount}/${tabData.tabData.length}</span>
     <span class="progress-bar"></span>
   `);
   }
