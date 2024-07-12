@@ -1,8 +1,15 @@
 import { initNewsListRenderer } from "../newsList/NewsListManager.js";
 import { updateTabContent, removeTabContent } from "./NewsTabContents.js";
-import { getTotalActiveTabIndex, setTotalActiveTabIndex, getTotalPageCount, setTotalPageCount } from "../../state/StateManager.js";
+import {
+  getTotalActiveTabIndex,
+  setTotalActiveTabIndex,
+  getTotalPageCount,
+  setTotalPageCount,
+  getTabsContainer
+} from "../../state/StateManager.js";
 
-function animateProgressBar(tab, tabsContainer, newsTabs) {
+function animateProgressBar(tab, newsTabs) {
+  const tabsContainer = getTabsContainer();
   const progressBar = tab.querySelector(".progress-bar");
   if (progressBar) {
     progressBar.style.width = "0%";
@@ -40,14 +47,14 @@ function animateProgressBar(tab, tabsContainer, newsTabs) {
             if (index === nextTabIndex) {
               tab.classList.add("active");
               updateTabContent(tab, newsTabs);
-              animateProgressBar(tab, tabsContainer, newsTabs);
+              animateProgressBar(tab, newsTabs);
             } else {
               tab.classList.remove("active");
               removeTabContent(tab);
             }
           });
         } else {
-          animateProgressBar(tab, tabsContainer, newsTabs);
+          animateProgressBar(tab, newsTabs);
         }
         initNewsListRenderer();
       }

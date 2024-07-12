@@ -1,4 +1,6 @@
+// common
 let currentView = "total";
+let tabsContainer = document.querySelector(".news-tabs");
 
 // subscribed
 let subCurrentPage = 1;
@@ -14,6 +16,14 @@ export function getCurrentView() {
 
 export function setCurrentView(view) {
   currentView = view;
+}
+
+export function getTabsContainer() {
+  return tabsContainer;
+}
+
+export function setTabsContainer(container) {
+  tabsContainer = container;
 }
 
 export function getSubCurrentPage() {

@@ -7,11 +7,12 @@ import {
   getTotalActiveTabIndex,
   getTotalPageCount,
   setTotalPageCount,
-  setTotalActiveTabIndex
+  setTotalActiveTabIndex,
+  getTabsContainer
 } from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
 
-function addArrowButtonClickListener(tabsContainer, newsTabs) {
+function addArrowButtonClickListener(newsTabs) {
   const container = document.querySelector(".container");
 
   container.addEventListener("click", async (event) => {
@@ -20,6 +21,7 @@ function addArrowButtonClickListener(tabsContainer, newsTabs) {
 
     if (isLeftButton || isRightButton) {
       const currentView = getCurrentView();
+      const tabsContainer = getTabsContainer();
       if (currentView === "total") {
         const tabs = tabsContainer.querySelectorAll(".tab");
         const activeTabIndex = getTotalActiveTabIndex();
@@ -46,7 +48,7 @@ function addArrowButtonClickListener(tabsContainer, newsTabs) {
             setTotalPageCount(1);
           }
         }
-        updateActiveTab(tabsContainer, newsTabs);
+        updateActiveTab(newsTabs);
       } else if (currentView === "subscribed") {
         let currentPage = getSubCurrentPage();
         const totalPages = getSubTotalPages();
