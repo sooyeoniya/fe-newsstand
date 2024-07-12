@@ -24,7 +24,7 @@ export function renderNewsItem(newsContainer, newsItem, subscriptionStatus) {
                 <li class="sub-news-headline">
                   <a href="${subNews.url}" target="_blank" rel="noopener noreferrer">${subNews.newsTitle}</a>
                 </li>
-              `).join('')}
+              `).join("")}
             </ul>
             <div class="news-disclaimer">
               ${newsItem.mediaName} 언론사에서 직접 편집한 뉴스입니다.

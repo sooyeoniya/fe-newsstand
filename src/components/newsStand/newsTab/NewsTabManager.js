@@ -54,7 +54,7 @@ async function initTabManager(tabsContainer, newsTabs) {
 
   initTabs(tabsContainer, newsTabs);
   addTabClickListener(tabsContainer, newsTabs);
-  animateProgressBar(tabsContainer.querySelector('.tab.active'), tabsContainer, newsTabs);
+  animateProgressBar(tabsContainer.querySelector(".tab.active"), tabsContainer, newsTabs);
   addArrowButtonClickListener(tabsContainer, newsTabs);
 }
 
