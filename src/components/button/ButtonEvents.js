@@ -11,6 +11,7 @@ import {
   getTabsContainer
 } from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
+import { VIEW_TYPES } from "../../constants/constants.js";
 
 // 좌우 버튼 기능
 function addArrowButtonClickListener(newsTabs) {
@@ -23,7 +24,8 @@ function addArrowButtonClickListener(newsTabs) {
     if (isLeftButton || isRightButton) {
       const currentView = getCurrentView();
       const tabsContainer = getTabsContainer();
-      if (currentView === "total") {
+
+      if (currentView === VIEW_TYPES.TOTAL) {
         const tabs = tabsContainer.querySelectorAll(".tab");
         const activeTabIndex = getTotalActiveTabIndex();
         const activeTab = tabs[activeTabIndex];
@@ -50,7 +52,7 @@ function addArrowButtonClickListener(newsTabs) {
           }
         }
         updateActiveTab(newsTabs);
-      } else if (currentView === "subscribed") {
+      } else if (currentView === VIEW_TYPES.SUBSCRIBED) {
         let currentPage = getSubCurrentPage();
         const totalPages = getSubTotalPages();
 

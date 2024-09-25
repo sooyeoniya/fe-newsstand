@@ -1,5 +1,7 @@
+import { VIEW_TYPES } from "../../constants/constants";
+
 // common
-let currentView = "total";
+let currentView = VIEW_TYPES.TOTAL;
 let tabsContainer = document.querySelector(".news-tabs");
 
 // subscribed

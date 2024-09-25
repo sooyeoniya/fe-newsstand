@@ -1,3 +1,4 @@
+import { ANIMATION_DURATION } from "../../constants/constants.js";
 import renderHeadline from "./HeadlineRenderer.js";
 
 // 롤링 기능
@@ -20,7 +21,7 @@ export default async function startRolling() {
     function startInterval() {
       rollingInterval = setInterval(() => {
         moveToNext();
-      }, 5000);
+      }, ANIMATION_DURATION);
     }
 
     list.addEventListener("mouseenter", () => {

@@ -8,6 +8,7 @@ export default async function TotalNewsList() {
   if (!activeTab) return;
 
   const activeCategory = activeTab.getAttribute("data-tab");
+
   try {
     const activeTabData = await getTabsNews(activeCategory);
     if (!activeTabData) return;
@@ -25,6 +26,7 @@ export default async function TotalNewsList() {
     }
 
     renderNewsItem(newsContainer, newsItem, subscriptionStatus);
+    
   } catch (error) {
     console.error(error);
   }

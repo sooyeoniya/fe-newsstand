@@ -1,3 +1,4 @@
+import { ANIMATION_DURATION } from "../../constants/constants";
 import "./Alerts.css";
 
 export default function ToastMessage(message) {
@@ -16,5 +17,5 @@ export default function ToastMessage(message) {
     toast.addEventListener("transitionend", () => {
       toast.remove();
     }, { once: true });
-  }, 5000);
+  }, ANIMATION_DURATION);
 }

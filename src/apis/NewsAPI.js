@@ -1,7 +1,7 @@
-const NEWS_API_URL = import.meta.env.VITE_NEWS_API_URL;
+import { NEWS_API_URL, API_ENDPOINTS } from "../constants/constants.js";
 
 export function getTopNews() {
-  return fetch(`${NEWS_API_URL}/topNewsData`)
+  return fetch(`${NEWS_API_URL}${API_ENDPOINTS.TOP_NEWS}`)
     .then(response => response.json())
     .catch(error => {
       console.error(error);
@@ -10,7 +10,7 @@ export function getTopNews() {
 }
 
 export function getTabsNews(category = null) {
-  let url = `${NEWS_API_URL}/tabNewsData`;
+  let url = `${NEWS_API_URL}${API_ENDPOINTS.TAB_NEWS}`;
   if (category) url += `?category=${category}`;
 
   return fetch(url)
