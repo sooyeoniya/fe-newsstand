@@ -10,4 +10,9 @@ export const VIEW_TYPES = {
     SUBSCRIBED: "subscribed"
 }
 
+export const BUTTON_TYPES = {
+    LEFT: "left",
+    RIGHT: "right"
+}
+
 export const ANIMATION_DURATION = 5000;
