@@ -1,26 +1,48 @@
 import { setCurrentView } from "../../state/StateManager.js";
+import { VIEW_TYPES } from "../../../constants/constants.js";
 
-// 각 언론사 버튼 클릭 이벤트 리스너
-function toggleView(activeButton, inactiveButton, activeView, inactiveView, viewName) {
-  setCurrentView(viewName);
-  activeButton.classList.add("active");
-  inactiveButton.classList.remove("active");
-  activeView.classList.add("active");
-  inactiveView.classList.remove("active");
+let buttons;
+let views;
+
+// DOM 요소 캐싱 함수
+function cacheDOMElements() {
+  buttons = {
+    [VIEW_TYPES.TOTAL]: document.querySelector(".media-total"),
+    [VIEW_TYPES.SUBSCRIBED]: document.querySelector(".media-my")
+  };
+
+  views = {
+    [VIEW_TYPES.TOTAL]: document.querySelector(".media-total-view"),
+    [VIEW_TYPES.SUBSCRIBED]: document.querySelector(".media-my-view")
+  };
 }
 
-function mediaButtonEvents() {
-  const mediaTotalButton = document.querySelector(".media-total");
-  const mediaMyButton = document.querySelector(".media-my");
-  const mediaTotalView = document.querySelector(".media-total-view");
-  const mediaMyView = document.querySelector(".media-my-view");
+// 공통 뷰 토글 함수
+function toggleView(viewName) {
+  setCurrentView(viewName);
 
-  mediaTotalButton.addEventListener("click", () => {
-    toggleView(mediaTotalButton, mediaMyButton, mediaTotalView, mediaMyView, "total");
+  // 모든 버튼과 뷰에서 'active' 클래스를 제거하고 선택한 것만 활성화
+  Object.keys(buttons).forEach(key => {
+    if (key === viewName) {
+      buttons[key].classList.add("active");
+      views[key].classList.add("active");
+    } else {
+      buttons[key].classList.remove("active");
+      views[key].classList.remove("active");
+    }
   });
+}
 
-  mediaMyButton.addEventListener("click", () => {
-    toggleView(mediaMyButton, mediaTotalButton, mediaMyView, mediaTotalView, "subscribed");
+// 이벤트 초기화 함수
+function mediaButtonEvents() {
+  // DOM 요소 캐싱
+  cacheDOMElements();
+
+  // 각 버튼에 클릭 이벤트 리스너 설정
+  Object.keys(buttons).forEach(viewName => {
+    if (buttons[viewName]) {
+      buttons[viewName].addEventListener("click", () => toggleView(viewName));
+    }
   });
 }
 
