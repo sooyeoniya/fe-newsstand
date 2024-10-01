@@ -20,3 +20,5 @@ export const HEADLINE_ITEMS = [ "headline-item-1" , "headline-item-2" ];
 export const ANIMATION_DURATION = 5000;
 
 export const ROLLING_INTERVAL = 1000;
+
+export const SUBSCRIPTION_STATUS_KEY = "subscriptionStatus";
