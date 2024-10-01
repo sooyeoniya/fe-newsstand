@@ -11,7 +11,12 @@ import {
   getTabsContainer
 } from "../state/StateManager.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
-import { VIEW_TYPES, BUTTON_TYPES } from "../../constants/constants.js";
+import { VIEW_TYPES } from "../../constants/constants.js";
+
+const BUTTON_TYPES = {
+  LEFT: "left",
+  RIGHT: "right"
+}
 
 // 좌우 버튼 기능
 function addArrowButtonClickListener(newsTabs) {

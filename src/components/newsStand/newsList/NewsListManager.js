@@ -1,10 +1,10 @@
 import { initSubscriptionStatus } from "../../subscription/SubscriptionManager.js";
 import TotalNewsList from "./TotalNewsList.js";
 import SubscribedNewsList from "./SubscribedNewsList.js";
-import { SUBSCRIPTION_STATUS_KEY } from "../../../constants/constants.js";
+import { hasSubscriptionStatus } from "../../../helpers/subscriptionHelpers.js";
 
 async function ensureSubscriptionStatus() {
-  if (!localStorage.getItem(SUBSCRIPTION_STATUS_KEY)) {
+  if (!hasSubscriptionStatus()) {
     await initSubscriptionStatus();
   }
 }

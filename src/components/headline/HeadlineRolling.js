@@ -1,5 +1,7 @@
-import { ANIMATION_DURATION, HEADLINE_ITEMS, ROLLING_INTERVAL } from "../../constants/constants.js";
+import { ANIMATION_DURATION, HEADLINE_ITEMS } from "../../constants/constants.js";
 import renderHeadline from "./HeadlineRenderer.js";
+
+const ROLLING_INTERVAL = 1000;
 
 function roll(list) {
   const itemHeight = list.children[0].offsetHeight;

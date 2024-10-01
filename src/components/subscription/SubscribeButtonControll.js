@@ -1,12 +1,13 @@
 import ToastMessage from "../alerts/ToastMessage.js";
 import Notification from "../alerts/Notification.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
+import { getSubscriptionStatus } from "../../helpers/subscriptionHelpers.js";
 
 // 구독 처리 기능
 async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;
   const mediaName = subscribeButton.dataset.mediaName;
-  const subscriptionStatus = JSON.parse(localStorage.getItem("subscriptionStatus"));
+  const subscriptionStatus = getSubscriptionStatus();
 
   if (subscriptionStatus[mediaName] === "N") {
     subscriptionStatus[mediaName] = "Y";
@@ -20,7 +21,7 @@ async function handleSubscribeButtonClick(event) {
     }
   }
 
-  localStorage.setItem("subscriptionStatus", JSON.stringify(subscriptionStatus));
+  setSubscriptionStatus(subscriptionStatus);
   await SubscribedNewsList();
 }
 

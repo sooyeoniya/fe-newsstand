@@ -1,4 +1,4 @@
-import {getTabsNews} from "../../apis/NewsAPI.js";
+import { getTabsNews } from "../../apis/NewsAPI.js";
 
 // 내가 구독한 언론사 데이터 초기화
 async function initSubscriptionStatus() {
@@ -10,7 +10,7 @@ async function initSubscriptionStatus() {
         subscriptionStatus[newsItem.mediaName] = "N";
       });
     });
-    localStorage.setItem("subscriptionStatus", JSON.stringify(subscriptionStatus));
+    setSubscriptionStatus(subscriptionStatus);
   } catch (error) {
     console.error(error);
   }

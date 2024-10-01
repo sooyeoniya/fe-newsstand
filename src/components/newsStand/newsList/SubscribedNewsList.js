@@ -1,6 +1,7 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { setSubTotalPages, getSubCurrentPage } from "../../state/StateManager.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
+import { getSubscriptionStatus } from "../../../helpers/subscriptionHelpers.js";
 
 const NO_SUBSCRIPTIONS_MESSAGE = '<p class="no-subscribe">구독한 언론사가 없습니다.</p>';
 
@@ -20,7 +21,7 @@ async function getFilteredNewsItems(subscribedMediaNames) {
 // 내가 구독한 언론사 리스트
 export default async function SubscribedNewsList() {
   const newsContainer = document.querySelector(".media-my-view .news-container");
-  const subscriptionStatus = JSON.parse(localStorage.getItem("subscriptionStatus")) || {};
+  const subscriptionStatus = getSubscriptionStatus();
 
   const subscribedMediaNames = getSubscribedMediaNames(subscriptionStatus);
 

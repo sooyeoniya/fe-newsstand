@@ -1,4 +1,9 @@
-import { NEWS_API_URL, API_ENDPOINTS } from "../constants/constants.js";
+const NEWS_API_URL = import.meta.env.VITE_NEWS_API_URL;
+
+const API_ENDPOINTS = {
+  TOP_NEWS: "/topNewsData",
+  TAB_NEWS: "/tabNewsData"
+}
 
 async function fetchData(url) {
   try {

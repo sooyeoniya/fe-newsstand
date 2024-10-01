@@ -1,5 +1,6 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
+import { getSubscriptionStatus } from "../../../helpers/subscriptionHelpers.js";
 
 // 전체 언론사 리스트
 export default async function TotalNewsList() {
@@ -18,11 +19,11 @@ export default async function TotalNewsList() {
     const newsItem = activeTabData.tabData[currentPage];
     if (!newsItem) return;
 
-    const subscriptionStatus = JSON.parse(localStorage.getItem("subscriptionStatus")) || {};
+    const subscriptionStatus = getSubscriptionStatus();
 
     if (!subscriptionStatus[newsItem.mediaName]) {
       subscriptionStatus[newsItem.mediaName] = "N";
-      localStorage.setItem("subscriptionStatus", JSON.stringify(subscriptionStatus));
+      setSubscriptionStatus(subscriptionStatus);
     }
 
     renderNewsItem(newsContainer, newsItem, subscriptionStatus);
