@@ -1,7 +1,7 @@
 import ToastMessage from "../alerts/ToastMessage.js";
 import Notification from "../alerts/Notification.js";
 import SubscribedNewsList from "../newsStand/newsList/SubscribedNewsList.js";
-import { getSubscriptionStatus } from "../../helpers/subscriptionHelpers.js";
+import { getSubscriptionStatus, setSubscriptionStatus } from "../../helpers/subscriptionHelpers.js";
 
 // 구독 처리 기능
 async function handleSubscribeButtonClick(event) {
