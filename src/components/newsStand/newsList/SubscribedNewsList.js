@@ -18,32 +18,39 @@ async function getFilteredNewsItems(subscribedMediaNames) {
   )
 }
 
+function displayNoSubscriptionMessage(newsContainer) {
+  newsContainer.innerHTML = NO_SUBSCRIPTIONS_MESSAGE;
+}
+
+async function renderSubscribedNewsList(newsContainer, subscriptionStatus, subscribedMediaNames) {
+  const filteredNewsItems = await getFilteredNewsItems(subscribedMediaNames);
+
+  if (filteredNewsItems.length === 0) {
+    displayNoSubscriptionMessage(newsContainer);
+    return;
+  }
+
+  setSubTotalPages(filteredNewsItems.length);
+  
+  const currentPage = getSubCurrentPage() || 1;
+  const newsItem = filteredNewsItems[currentPage - 1];
+
+  renderNewsItem(newsContainer, newsItem, subscriptionStatus);
+}
+
 // 내가 구독한 언론사 리스트
 export default async function SubscribedNewsList() {
   const newsContainer = document.querySelector(".media-my-view .news-container");
   const subscriptionStatus = getSubscriptionStatus();
-
   const subscribedMediaNames = getSubscribedMediaNames(subscriptionStatus);
 
   if (subscribedMediaNames.length === 0) {
-    newsContainer.innerHTML = NO_SUBSCRIPTIONS_MESSAGE;
+    displayNoSubscriptionMessage(newsContainer);
     return;
   }
 
   try {
-    const filteredNewsItems = await getFilteredNewsItems(subscribedMediaNames);
-
-    if (filteredNewsItems.length === 0) {
-      newsContainer.innerHTML = NO_SUBSCRIPTIONS_MESSAGE;
-      return;
-    }
-
-    setSubTotalPages(filteredNewsItems.length);
-    const currentPage = getSubCurrentPage() || 1;
-    const newsItem = filteredNewsItems[currentPage - 1];
-
-    renderNewsItem(newsContainer, newsItem, subscriptionStatus);
-
+    renderSubscribedNewsList(newsContainer, subscriptionStatus, subscribedMediaNames);
   } catch (error) {
     console.error(error);
   }
