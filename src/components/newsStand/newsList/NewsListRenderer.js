@@ -1,8 +1,7 @@
 import { handleSubscribeButtonClick } from "../../subscription/SubscribeButtonControll.js";
+import { SUBSCRIBE_BUTTON_TEXT, SUBSCRIPTION_STATUS} from "../../../constants/constants.js";
 
 const EDIT_TEXT = "편집";
-const SUBSCRIBE_TEXT = "+ 구독하기";
-const UNSUBSCRIBE_TEXT = "x";
 const NEWS_DISCLAIMER_TEXT = "언론사에서 직접 편집한 뉴스입니다.";
 const ALT_NEWS_IMAGE = "뉴스 이미지";
 
@@ -12,7 +11,7 @@ function renderNewsMeta(newsItem, subscriptionStatus) {
       <img src="${newsItem.sourceLogo}" alt="${newsItem.mediaName} logo" class="news-source" />
       <span class="news-date">${newsItem.newsDate} ${EDIT_TEXT}</span>
       <button class="subscribe-button" data-media-name="${newsItem.mediaName}">
-        ${subscriptionStatus[newsItem.mediaName] === "Y" ? UNSUBSCRIBE_TEXT : SUBSCRIBE_TEXT}
+        ${subscriptionStatus[newsItem.mediaName] === SUBSCRIPTION_STATUS.SUBSCRIBED ? SUBSCRIBE_BUTTON_TEXT.UNSUBSCRIBE : SUBSCRIBE_BUTTON_TEXT.SUBSCRIBE}
       </button>
     </div>
   `;

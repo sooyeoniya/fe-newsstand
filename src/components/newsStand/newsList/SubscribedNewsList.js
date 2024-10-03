@@ -2,12 +2,13 @@ import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { setSubTotalPages, getSubCurrentPage } from "../../state/StateManager.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
 import { getSubscriptionStatus } from "../../../helpers/subscriptionHelpers.js";
+import { SUBSCRIPTION_STATUS } from "../../../constants/constants.js";
 
 const NO_SUBSCRIPTIONS_MESSAGE = '<p class="no-subscribe">구독한 언론사가 없습니다.</p>';
 
 function getSubscribedMediaNames(subscriptionStatus) {
   return Object.keys(subscriptionStatus).filter(
-    mediaName => subscriptionStatus[mediaName] === "Y"
+    mediaName => subscriptionStatus[mediaName] === SUBSCRIPTION_STATUS.SUBSCRIBED
   );
 }
 
@@ -31,7 +32,7 @@ async function renderSubscribedNewsList(newsContainer, subscriptionStatus, subsc
   }
 
   setSubTotalPages(filteredNewsItems.length);
-  
+
   const currentPage = getSubCurrentPage() || 1;
   const newsItem = filteredNewsItems[currentPage - 1];
 

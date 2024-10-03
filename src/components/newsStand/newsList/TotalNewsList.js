@@ -1,6 +1,7 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
 import { getSubscriptionStatus, setSubscriptionStatus } from "../../../helpers/subscriptionHelpers.js";
+import { SUBSCRIPTION_STATUS } from "../../../constants/constants.js";
 
 function getActiveTabAndCategory() {
   const activeTab = document.querySelector(".news-tabs .tab.active");
@@ -14,7 +15,7 @@ function getActiveTabAndCategory() {
 
 function ensureSubscriptionStatus(subscriptionStatus, mediaName) {
   if (!subscriptionStatus[mediaName]) {
-    subscriptionStatus[mediaName] = "N";
+    subscriptionStatus[mediaName] = SUBSCRIPTION_STATUS.UNSUBSCRIBED;
     setSubscriptionStatus(subscriptionStatus);
   }
 }

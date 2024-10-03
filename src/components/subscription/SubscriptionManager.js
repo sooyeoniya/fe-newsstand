@@ -1,5 +1,6 @@
 import { getTabsNews } from "../../apis/NewsAPI.js";
 import { setSubscriptionStatus } from "../../helpers/subscriptionHelpers.js";
+import { SUBSCRIPTION_STATUS } from "../../constants/constants.js";
 
 // 내가 구독한 언론사 데이터 초기화
 async function initSubscriptionStatus() {
@@ -8,7 +9,7 @@ async function initSubscriptionStatus() {
     const newsTabs = await getTabsNews();
     newsTabs.forEach(tab => {
       tab.tabData.forEach(newsItem => {
-        subscriptionStatus[newsItem.mediaName] = "N";
+        subscriptionStatus[newsItem.mediaName] = SUBSCRIPTION_STATUS.UNSUBSCRIBED;
       });
     });
     setSubscriptionStatus(subscriptionStatus);
