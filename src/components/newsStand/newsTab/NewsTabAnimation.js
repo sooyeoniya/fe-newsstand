@@ -7,6 +7,7 @@ import {
   setTotalPageCount,
   getTabsContainer
 } from "../../state/StateManager.js";
+import { ANIMATION_DURATION } from "../../../constants/constants.js";
 
 // 카테고리 탭 프로그래스바 애니메이션 기능
 function animateProgressBar(tab, newsTabs) {
@@ -14,7 +15,7 @@ function animateProgressBar(tab, newsTabs) {
   const progressBar = tab.querySelector(".progress-bar");
   if (progressBar) {
     progressBar.style.width = "0%";
-    const totalDuration = 5000; // 5초
+    const totalDuration = ANIMATION_DURATION;
     const startTime = performance.now();
 
     let animationId = null;

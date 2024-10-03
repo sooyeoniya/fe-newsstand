@@ -1,29 +1,48 @@
 import { getTabsNews } from "../../../apis/NewsAPI.js";
 import { renderNewsItem } from "./NewsListRenderer.js";
+import { getSubscriptionStatus, setSubscriptionStatus } from "../../../helpers/subscriptionHelpers.js";
+import { SUBSCRIPTION_STATUS } from "../../../constants/constants.js";
+
+function getActiveTabAndCategory() {
+  const activeTab = document.querySelector(".news-tabs .tab.active");
+  if(!activeTab) return;
+
+  const activeCategory = activeTab.getAttribute("data-tab");
+  if(!activeCategory) return;
+
+  return { activeTab, activeCategory };
+}
+
+function ensureSubscriptionStatus(subscriptionStatus, mediaName) {
+  if (!subscriptionStatus[mediaName]) {
+    subscriptionStatus[mediaName] = SUBSCRIPTION_STATUS.UNSUBSCRIBED;
+    setSubscriptionStatus(subscriptionStatus);
+  }
+}
+
+function getCurrentPage() {
+  const pageInfo = document.querySelector(".page-info");
+  return parseInt(pageInfo.textContent.split("/")[0], 10) - 1;
+}
 
 // 전체 언론사 리스트
 export default async function TotalNewsList() {
   const newsContainer = document.querySelector(".news-container");
-  const activeTab = document.querySelector(".news-tabs .tab.active");
-  if (!activeTab) return;
+  const { activeTab, activeCategory } = getActiveTabAndCategory();
+  if(!activeTab || !activeCategory) return;
 
-  const activeCategory = activeTab.getAttribute("data-tab");
   try {
     const activeTabData = await getTabsNews(activeCategory);
     if (!activeTabData) return;
 
-    const pageInfo = activeTab.querySelector(".page-info");
-    const currentPage = parseInt(pageInfo.textContent.split("/")[0], 10) - 1;
+    const currentPage = getCurrentPage();
+
     const newsItem = activeTabData.tabData[currentPage];
     if (!newsItem) return;
 
-    const subscriptionStatus = JSON.parse(localStorage.getItem("subscriptionStatus")) || {};
+    const subscriptionStatus = getSubscriptionStatus();
 
-    if (!subscriptionStatus[newsItem.mediaName]) {
-      subscriptionStatus[newsItem.mediaName] = "N";
-      localStorage.setItem("subscriptionStatus", JSON.stringify(subscriptionStatus));
-    }
-
+    ensureSubscriptionStatus(subscriptionStatus, newsItem.mediaName);
     renderNewsItem(newsContainer, newsItem, subscriptionStatus);
   } catch (error) {
     console.error(error);
