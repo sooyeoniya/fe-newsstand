@@ -25,7 +25,6 @@ async function handleSubscribeButtonClick(event) {
   const subscribeButton = event.target;
   const mediaName = subscribeButton.dataset.mediaName;
   const subscriptionStatus = getSubscriptionStatus();
-  console.log(subscriptionStatus);
   const isCurrentlySubscribed = subscriptionStatus[mediaName] === SUBSCRIPTION_STATUS.SUBSCRIBED;
 
   let actionPerformed = false;
